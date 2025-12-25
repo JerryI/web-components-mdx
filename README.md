@@ -4,7 +4,7 @@ A basic MDX blog template example that uses exported WLJS Notebooks stored as MD
 
 ## Overview
 
-This project demonstrates a blog application built with Next.js and MDX where blog posts are generated from WLJS (Wolfram Language Jupyter) Notebooks. Each notebook is exported to MDX format with associated assets (kernel files, notebooks, attachments) that are served alongside the blog post content.
+This project demonstrates a blog application built with Next.js and MDX where blog posts are generated from [WLJS Notebooks](https://wljs.io). Each notebook is exported to MDX format with associated assets (kernel files, notebooks, attachments) that are served alongside the blog post content.
 
 ## Features
 
