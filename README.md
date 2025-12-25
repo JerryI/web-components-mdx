@@ -9,10 +9,11 @@ This project demonstrates a blog application built with Next.js and MDX where bl
 ## Features
 
 - 📝 Blog posts from exported WLJS Notebooks in MDX format (Markdown + JSX)
+- 🚀 Interactive notebook content rendered alongside traditional blog post content
 - 📦 Asset management for notebook files and attachments
 - 🏷️ Support for post metadata (title, date, author, tags)
 - 🔍 Automatic blog post discovery from `content/posts`
-- 💻 Interactive notebook content rendered alongside traditional blog post content
+- 🧑‍🚀 Export to Github Pages
 
 ## Project Structure
 
@@ -37,6 +38,7 @@ This project demonstrates a blog application built with Next.js and MDX where bl
 ### Prerequisites
 
 - Node.js 18+ and npm/yarn/pnpm
+- WLJS Notebook >= 2.9.2
 
 ### Installation
 
