@@ -5,12 +5,8 @@ A simple, modern blog application built with Next.js and MDX. Write your blog po
 ## Features
 
 - 📝 Write blog posts in MDX format (Markdown + JSX)
-- 🎨 Clean, responsive design with Tailwind CSS
-- ⚡ Fast performance with Next.js App Router
 - 🏷️ Support for post metadata (title, date, author, tags)
 - 🔍 Automatic blog post discovery from `content/posts`
-- 📱 Fully responsive design
-- 🔗 SEO-friendly with proper metadata
 
 ## Project Structure
 
@@ -84,26 +80,15 @@ Your content goes here. You can use standard Markdown syntax.
 
 - `npm run dev` - Start the development server
 - `npm run build` - Build for production
-- `npm start` - Start the production server
-- `npm run lint` - Run ESLint
+- `npm run export` - Export statics for Github Pages
 
 ## Technologies
 
 - **Next.js 15** - React framework with App Router
 - **MDX** - Markdown + JSX support
 - **TypeScript** - Type-safe JavaScript
-- **Tailwind CSS** - Utility-first CSS framework
 - **next-mdx-remote** - MDX rendering in Next.js
 - **gray-matter** - YAML front matter parsing
-
-## Deployment
-
-Build and deploy to any platform supporting Next.js (Vercel, Netlify, etc.)
-
-```bash
-npm run build
-npm start
-```
 
 ## License
 

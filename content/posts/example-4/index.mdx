@@ -1,0 +1,42 @@
+---
+title:  Simple fast animation
+---
+
+{/* add this script to the body  */}
+{/* https://cdn.jsdelivr.net/gh/WLJSTeam/web-components@latest/src/common/app.js */}
+<wljs-store kernel="./attachments/kernel-714215149096084936.txt" json="./attachments/7ea7c816-8bd6-4c19-a1da-ffbe157ccb72.txt"></wljs-store>
+
+
+
+
+# Simple fast animation
+Falling balls
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`balls = RandomReal[{-1,1}, {300,3}];
+vels  = RandomReal[{-1,1}, {300,3}];
+
+Graphics3D[{
+  Table[With[{i = i},
+    {
+      RGBColor[RandomReal[{0,1}, 3]],
+      Sphere[balls[[i]] // Offload, 0.03]
+    }
+  ], {i, Length[balls]}], 
+  EventHandler[AnimationFrameListener[balls // Offload], updateFunction]
+}]`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`(*VB[*)(FrontEndRef["87a9a9a3-1b1d-4aef-9661-024e43de38eb"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKW5gnWgKhsa5hkmGKrkliapqupZmZoa6BkUmqiXFKqrFFahIAhpUV1Q=="*)(*]VB*)`}</wljs-editor>
+
+Update function
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`updateFunction = Function[Null,
+  vels = Table[
+    If[Norm[balls[[i]]] < 0.01, -1, 1] vels[[i]] - 0.08 balls[[i]]
+  , {i, Length[balls]}];
+  
+  balls = Table[balls[[i]] + 0.08 vels[[i]], {i, Length[balls]}];
+];`}</wljs-editor>
+
+Kickstart
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`updateFunction[];`}</wljs-editor>

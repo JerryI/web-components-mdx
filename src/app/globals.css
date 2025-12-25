@@ -1,3 +1,4 @@
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -31,7 +32,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
+.container-main {
   max-width: 64rem; /* 1024px */
   margin: 0 auto;
   padding: 1rem;
@@ -80,8 +81,7 @@ body {
 
 /* Code blocks */
 .mdx-content pre {
-  background: #0f172a;
-  color: #e6eef8;
+  background: #f5f5f5;
   padding: 1rem;
   border-radius: 6px;
   overflow: auto;
@@ -96,8 +96,7 @@ body {
 
 /* Inline code */
 .mdx-content code {
-  background: var(--surface);
-  color: var(--foreground);
+  background: #f5f5f5;
   padding: 0.15rem 0.3rem;
   border-radius: 4px;
   font-size: 0.95em;
@@ -106,3 +105,40 @@ body {
 @media (min-width: 640px) {
   .hero h1 { font-size: 3rem; }
 }
+
+
+/* Styles for WLJS blocks */
+wljs-html,wljs-assets {
+  display: inline-block;
+  width:100%;
+}
+wljs-html:not(:defined) {
+  display: none;
+}
+wljs-assets:not(:defined) {
+  display: none
+} 
+wljs-editor {
+  border: none;
+  background: none;
+  display: block;
+  line-height: 1em;
+  letter-spacing: normal;
+  overflow: auto;
+  padding-top: 0em;
+  padding-left: 2px;
+  background: #f5f5f5;
+  border-radius: 6px;
+  padding: calc(1rem + 2px);
+  padding-top: 1rem;
+  overflow: auto;  
+  font-family: monospace;
+  margin-bottom: 1rem;
+} 
+wljs-editor.wljs-mounted {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: block;
+} 

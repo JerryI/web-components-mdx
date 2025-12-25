@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import 'katex/dist/katex.min.css';
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <nav className="site-nav">
-          <div className="nav-inner container">
+          <div className="nav-inner container-main">
             <Link href="/" className="brand">
               📝 Blog
             </Link>
@@ -37,6 +39,12 @@ export default function RootLayout({
           </div>
         </nav>
         {children}
+        {/* Example: external script loaded after hydration */}
+        <Script
+          src="/app.js"
+          strategy="afterInteractive"
+          id="wljs-component"
+        />
       </body>
     </html>
   );

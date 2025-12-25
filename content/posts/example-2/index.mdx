@@ -1,0 +1,140 @@
+---
+title:  ManipulatePlot
+---
+
+{/* add this script to the body  */}
+{/* https://cdn.jsdelivr.net/gh/WLJSTeam/web-components@latest/src/common/app.js */}
+<wljs-store kernel="./attachments/kernel-2910742074173301727.txt" json="./attachments/da252ae3-8373-4208-85fd-b197fe281bfa.txt"></wljs-store>
+
+
+
+
+## ManipulatePlot
+An example of built-in function for interactive plotting
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`ManipulatePlot[Sin[w z + p], {z,0,10}, {w, 0, 15.1, 1}, {p, 0, Pi, 0.1}]`}</wljs-editor>
+
+Example with two curves
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`ManipulatePlot[{
+  (*TB[*)Sum[(*|*)(*FB[*)((Sin[2π(2j - 1) x])(*,*)/(*,*)(2j-1))(*]FB*)(*|*), {(*|*)j(*|*),(*|*)1.0(*|*),(*|*)n(*|*)}](*|*)(*1:eJxTTMoPSmNiYGAoZgMSwaW5TvkVmYwgPguQCCkqTQUAeAcHBQ==*)(*]TB*),
+  (*TB[*)Sum[(*|*)(*FB[*)((Cos[2π(2j - 1) x])(*,*)/(*,*)(2j-1))(*]FB*)(*|*), {(*|*)j(*|*),(*|*)1.0(*|*),(*|*)n(*|*)}](*|*)(*1:eJxTTMoPSmNiYGAoZgMSwaW5TvkVmYwgPguQCCkqTQUAeAcHBQ==*)(*]TB*)
+  
+}, {x, -1,1}, {{n,4}, 1,7, 1}]`}</wljs-editor>
+
+One can perform side effects using an optional parameter
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Module[{r},
+  ManipulatePlot[{
+    (*TB[*)Sum[(*|*)(*FB[*)((Sin[2π(2j - 1) x])(*,*)/(*,*)(2j-1))(*]FB*)(*|*), {(*|*)j(*|*),(*|*)1.0(*|*),(*|*)n(*|*)}](*|*)(*1:eJxTTMoPSmNiYGAoZgMSwaW5TvkVmYwgPguQCCkqTQUAeAcHBQ==*)(*]TB*),
+    (*TB[*)Sum[(*|*)(*FB[*)((Cos[2π(2j - 1) x])(*,*)/(*,*)(2j-1))(*]FB*)(*|*), {(*|*)j(*|*),(*|*)1.0(*|*),(*|*)n(*|*)}](*|*)(*1:eJxTTMoPSmNiYGAoZgMSwaW5TvkVmYwgPguQCCkqTQUAeAcHBQ==*)(*]TB*)
+  
+  }, {x, -1,1}, {{n,4}, 1,7, 1},
+  Epilog -> {
+    Table[{
+      RandomColor[], Circle[RandomReal[{-1,1}, 2], r // Offload]
+    }, {10}]
+  }, "UpdateFunction" -> Function[n,
+    r = (n - 1)/5.0;
+    True
+  ]]
+]`}</wljs-editor>
+
+`ManipulateParametricPlot` is another variation:
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`ManipulateParametricPlot[Exp[-x/w]{Sin[x], Cos[x]}, {x,0,4Pi}, {w,10,100}]`}</wljs-editor>
+
+## General Manipulate expression
+`Manipulate` can be used on any valid Wolfram Expression. 2D/3D plots and images passed as `expr` or part of it will be automatically optimized using __Just-in-Time__ (JIT) transpiler if possible. This provides an __immediate mode__ for a user to construct dynamic interactive widgets.
+
+:::tip
+For frequently changing data or complex visuals we still do recommend to use low-level building blocks such as `Offload`, `InputRange`.
+:::
+
+Here is a basic example involving symbolics:
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Manipulate[Column[{
+  Style[StringTemplate["\`\` m/s"][x], Blue],
+  Table["🚗", {i, Floor[x/25]}]//Row 
+}], {x,10,100}, ContinuousAction->True]`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`(*VB[*)(FrontEndRef["27134ba0-96ac-4484-8a20-b1fee8d6fcae"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKG5kbGpskJRroWpolJuuamFiY6FokGhnoJhmmpaZapJilJSemAgB8QhX9"*)(*]VB*)`}</wljs-editor>
+
+Series expansion:
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Manipulate[Series[Sin[x], {x,0,n}], {n,1,10,1}]`}</wljs-editor>
+
+Here is another example with `Plot` expression:
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Manipulate[
+ Plot[Sin[a x + b], {x, 0, 6}], {{a, 2, "Multiplier"}, 1, 
+  4}, {{b, 0, "Phase Parameter"}, 0, 10}, ContinuousAction->True]`}</wljs-editor>
+
+More complex version:
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Manipulate[Plot[1.0 + Sin[w] Sin[x + w],{x,0,5Pi}, Epilog->{
+  Red, Point[{8.0, 1.0 + Sin[w] Sin[8.0 + w]}]
+}], {w,0,Pi}, ContinuousAction->True]`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`(*VB[*)(FrontEndRef["9898e1e6-43ea-4621-85dd-f2d839f74bca"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKW1pYWqQapprpmhinJuqamBkZ6lqYpqTophmlWBhbppmbJCUnAgB+mhW8"*)(*]VB*)`}</wljs-editor>
+
+Another example, that solves ODE on-fly:
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Manipulate[
+ Plot[Evaluate[
+   y[t] /. First[
+     NDSolve[ {y''[x] == -x y[x], y[0] == a, y'[0] == b}, 
+      y, {x, 0, 4}]]], {t, 0, 4}, 
+  Epilog -> {Point[{4, 1/2}], Green, Arrow[{{0, a}, {1, b + a}}], Red,
+     Point[{0, a}]},  PlotRange -> {{0,5}, {-6,6}}],
+ {{a, 1}, -3, 3},
+ {{b, 0}, -3, 3}]`}</wljs-editor>
+
+3D plot example:
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Manipulate[Plot3D[Sin[n x] Cos[n y], {x,-1,1}, {y,-1,1}], {n, 1, 5, 0.3}, ContinuousAction->True]`}</wljs-editor>
+
+Image manipulations:
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`img = ImageResize[ExampleData[ExampleData["TestImage"] // Last], 350];
+Manipulate[
+  ImageAdjust[img, {c,a}], 
+  
+  {{c, 0},0,5,0.1}, 
+  {{a, 0},0,5,0.1},
+  ContinuousAction->True
+]`}</wljs-editor>
+
+Here is an example with mixed symbolics and graphics:
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Manipulate[
+  Row[{
+    "m", "==", MatrixForm[m], 
+    StreamPlot[Evaluate[m . {x, y}], {x, -1, 1}, {y, -1, 1}, 
+      StreamScale -> Large, ImageSize -> Small
+    ]
+  }], {{m, ((*GB[*){{1(*|*),(*|*)0}(*||*),(*||*){0(*|*),(*|*)2}}(*]GB*))}, { ((*GB[*){{1(*|*),(*|*)0}(*||*),(*||*){0(*|*),(*|*)2}}(*]GB*)) -> "Nodal source",  ((*GB[*){{1(*|*),(*|*)1}(*||*),(*||*){0(*|*),(*|*)1}}(*]GB*))  -> "Degenerate source",  ((*GB[*){{0(*|*),(*|*)1}(*||*),(*||*){-1(*|*),(*|*)1}}(*]GB*)) -> "Spiral source",  ((*GB[*){{-1(*|*),(*|*)0}(*||*),(*||*){0(*|*),(*|*)-2}}(*]GB*))  -> "Nodal sink",  ((*GB[*){{-1(*|*),(*|*)1}(*||*),(*||*){0(*|*),(*|*)-1}}(*]GB*)) -> "Degenerate sink",  ((*GB[*){{0(*|*),(*|*)1}(*||*),(*||*){-1(*|*),(*|*)-1}}(*]GB*)) -> "Spiral sink",  ((*GB[*){{0(*|*),(*|*)1}(*||*),(*||*){-1(*|*),(*|*)0}}(*]GB*)) -> "Center",  ((*GB[*){{1(*|*),(*|*)0}(*||*),(*||*){0(*|*),(*|*)-2}}(*]GB*))  -> "Saddle"}}]`}</wljs-editor>
+
+### Tips for better performance
+If you still want to use `Manipulate` on some complex expressions, there are some tricks to avoid deoptimization of JIT engine
+
+:::tip
+- Try to keep the number of curves/traces/polygons expressions the same if possible. Try not to add new entities to your graphs.
+- `PerformanceGoal->"Speed"` is also a good option for 3D plots.
+- `Mesh->None` might also help.
+- `PlotRange->Full` can help to avoid fragmentation of line segments
+- Avoid changing colors, opacity at runtime
+:::
+
+:::note
+In any case you can still animate anything with a great performance using __low-level building blocks__ `Offload` and `AnimationFrameListener`.
+
+See __Advanced section__ of the documentation
+:::
+
+## Fallback to Mathematica's Renderer
+To use native Wolfram Language renderer, one can wrap `Manipulate` with `MMAView`. The output will be rasterized:
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Manipulate[
+  Plot3D[Sin[n x] Cos[n y], {x,-1,1}, {y,-1,1}]
+, {n, 1, 5, 1}] // MMAView`}</wljs-editor>

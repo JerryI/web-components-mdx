@@ -1,0 +1,875 @@
+<|"Notebook" -> <|"Controller" -> "9e09dd72-1393-4a11-94ab-7f6f25f1cd1a", 
+   "FocusedCell" -> CoffeeLiqueur`Notebook`Cells`CellObj[
+     CoffeeLiqueur`Notebook`Cells`CellObj`$96], "HaveToSaveAs" -> False, 
+   "MessangerChannel" -> Messanger, "ModalsChannel" -> 
+    "b7d460f9-ea72-48d3-9ab2-28fc0b494f77", "Objects" -> <||>, 
+   "Path" -> "/Users/kirill/Documents/WLJS Notebooks/Bread and butter.wln", 
+   "PublicFields" -> {"Properties"}, "Quick" -> True, "Symbols" -> <||>, 
+   "TOC" -> {CoffeeLiqueur`Extensions`TOC`Private`heading[1, 
+      "Bread and butter", CoffeeLiqueur`Notebook`Cells`CellObj[
+       CoffeeLiqueur`Notebook`Cells`CellObj`$88]], 
+     CoffeeLiqueur`Extensions`TOC`Private`heading[2, "Rectangle model", 
+      CoffeeLiqueur`Notebook`Cells`CellObj[
+       CoffeeLiqueur`Notebook`Cells`CellObj`$95]], 
+     CoffeeLiqueur`Extensions`TOC`Private`heading[2, 
+      "Theorem of center mass dynamics", CoffeeLiqueur`Notebook`Cells`CellObj[
+       CoffeeLiqueur`Notebook`Cells`CellObj`$123]]}|>, 
+ "Cells" -> {<|"Data" -> ".md\n# Bread and butter\nDoes it really fall down \
+with a butter at the bottom?", "Display" -> "codemirror", 
+    "Hash" -> "3a44e45f-465c-4cdd-a51c-4c085073dd76", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Input", 
+    "UID" -> Null, "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "# Bread and butter\nDoes it really fall down with a butter at \
+the bottom?", "Display" -> "markdown", 
+    "Hash" -> "aa0ac941-142d-4f8b-b48e-16c15b91b75a", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> ".md\n## Rectangle model\nLet us solve it", 
+    "Display" -> "codemirror", "Hash" -> 
+     "88430942-bed3-4db0-997a-1e69221a2f2e", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Input", 
+    "UID" -> Null, "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "## Rectangle model\nLet us solve it", 
+    "Display" -> "markdown", "Hash" -> 
+     "f103a5fb-2760-4eaf-b435-a4666fea3620", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "Graphics @@ {{\n  LightOrange, Rectangle[{-1, 0.7}, {1,1}],\n \
+ Brown, Rectangle[{-1,-1}, {1, 0.6}]\n}, AspectRatio->1/3}", 
+    "Display" -> "codemirror", "Hash" -> 
+     "39f0948b-95ba-485c-a6d1-e08b60ce9a13", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "(*VB[*)(Graphics[{RGBColor[1, 0.9, 0.8], Rectangle[{-1, 0.7}, \
+{1, 1}], RGBColor[0.6, 0.4, 0.2], Rectangle[{-1, -1}, {1, 0.6}]}, AspectRatio \
+-> \
+1/3])(*,*)(*\"1:eJxTTMoPSmNkYGAoZgESHvk5KWlMIB4HkHAvSizIyEwuTmOByftkFpekMcPkg\
+9ydnPNz8osyQfqLzp4BgTf2RbNmgsBLe4hBnCCFqckliXnpOakQIZhJmf+BoCgNDJ7Zo8mBzAQTmP\
+YVGYPBY5hVN2GMk0TaCSaw2Ac3GCEXVJqTWswNZDgWFwBNDEosycxHhBCYm5eYA3EtyKEAcwVfAw=\
+=\"*)(*]VB*)", "Display" -> "codemirror", 
+    "Hash" -> "1dce3521-e417-4161-8b08-cea846d835f6", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> ".md\nAdd center of mass to the equation asumming that the \
+butter is denser that our bread. In general the positon of our body can be \
+described as $\\\\mathbf{r}$ and $\\\\mathbf{L}$ vectors", 
+    "Display" -> "codemirror", "Hash" -> 
+     "30cb50bc-f0a3-45c1-9fd7-abf674c1bfcb", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Input", 
+    "UID" -> Null, "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "Add center of mass to the equation asumming that the butter \
+is denser that our bread. In general the positon of our body can be described \
+as $\\\\mathbf{r}$ and $\\\\mathbf{L}$ vector", "Display" -> "markdown", 
+    "Hash" -> "0d0ca6c7-e50c-4771-8059-853318a1f4d5", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "r = {0,0};\n\\[CapitalOmega] = 0;", 
+    "Display" -> "codemirror", "Hash" -> 
+     "3d984468-dcf7-4e64-b161-0cab96c9d088", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> 
+     ".md\nEstimate densoty of butter and bread and calcualte center of mass"\
+, "Display" -> "codemirror", "Hash" -> 
+     "121eede5-3cf2-4a44-a22c-ff2c88a024b1", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Input", 
+    "UID" -> Null, "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> 
+     "Estimate densoty of butter and bread and calcualte center of mass", 
+    "Display" -> "markdown", "Hash" -> 
+     "2887669e-749f-4f22-81b5-30fd501acc8c", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "{(*BB[*)(SemanticInterpretation[\"density of butter \
+\"])(*,*)(*\"1:eJxTTMoPSmNhYGAo5gcSAUX5ZZkpqSn+BSWZ+XnFaYwgCV4gEZaZWu6SmpxflF\
+iSXxTMARQJTs1NzCvJTE5jAqkBmRBUmpMazAaSKinKzEsHi4UUlaaiqeACCSdm5kBUBYMklWKxqPF\
+ITUyBqpFAss8zryS1qKAotSQR5MRoJQAneDHG\"*)(*]BB*), \
+(*BB[*)(SemanticInterpretation[\"density of bread \
+\"])(*,*)(*\"1:eJxTTMoPSmNhYGAo5gcSAUX5ZZkpqSn+BSWZ+XnFaYwgCV4gEZaZWu6SmpxflF\
+iSXxTMARQJTs1NzCvJTE5jAqkBmRBUmpMazAaSKinKzEsHi4UUlaaiqeACCSdm5kBUBYMklWKxqPF\
+ITUyBqpFAss8zryS1qKAotSQR5MRoJQAneDHG\"*)(*]BB*)}", 
+    "Display" -> "codemirror", "Hash" -> 
+     "04f06e97-5c71-453c-a9ac-7dbaede48ecf", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "{(*VB[*)(Quantity[0.9467926356516039865`2., \
+\"Grams\"/\"Centimeters\"^3])(*,*)(*\"1:eJxTTMoPSmNkYGAoZgESHvk5KWnMIB4vkAjLT\
+C13SU3OL0osyS8K5gCKBJYm5pVkllQGSQA5BnqWJmbmlkZmxqZmpoZmBsaWFmamCUZ6aUwgA1iBRE\
+hmbmoxghuQX55aFMwNZDmnAo3JTS1JLSrO/Pv///9gkLR7UWJuMQBFQiRs\"*)(*]VB*),(*VB[*)\
+(Quantity[0.3807885439396734295`2., \
+\"Grams\"/\"Centimeters\"^3])(*,*)(*\"1:eJxTTMoPSmNkYGAoZgESHvk5KWnMIB4vkAjLT\
+C13SU3OL0osyS8K5gCKBJYm5pVkllQGSQA5BnrGFgbmFhamJsaWxpZm5sYmRpamCUZ6aUwgA1iBRE\
+hmbmoxghuQX55aFMwNZDmnAo3JTS1JLSrO/Pv///9gkLR7UWJuMQBF9iRv\"*)(*]VB*)}", 
+    "Display" -> "codemirror", "Hash" -> 
+     "997d8f3b-b790-4dac-ad40-fb24c1011eb7", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> ".md\nWe need only the ratio, therfore assuming the same \
+width, height of our layer, but different thickness we get ", 
+    "Display" -> "codemirror", "Hash" -> 
+     "388cbda5-737d-4437-b505-c4217d9b36dc", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Input", 
+    "UID" -> Null, "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "We need only the ratio, therfore assuming the same width, \
+height of our layer, but different thickness we get ", 
+    "Display" -> "markdown", "Hash" -> 
+     "8fa6e6c3-62c6-465e-9ea7-8a7f5fea481b", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "density = QuantityMagnitude /@ \
+<|\"\|01f9c8\"->(*VB[*)(Quantity[19/20, \
+\"Grams\"/\"Centimeters\"^3])(*,*)(*\"1:eJxTTMoPSmNkYGAoZgESHvk5KWnMIB4vkAjLT\
+C13SU3OL0osyS8K5gCKBJYm5pVkllSmMYHUgESCEksy8/MSczKFgZxMESABkWMFEiGZuanFCG5Afn\
+lqUTA3kOWcCjQlN7Uktag48+////+DQdLuRYm5xQAhnCQG\"*)(*]VB*), \
+\"\|01f35e\"->(*VB[*)(Quantity[19/50, \
+\"Grams\"/\"Centimeters\"^3])(*,*)(*\"1:eJxTTMoPSmNkYGAoZgESHvk5KWnMIB4vkAjLT\
+C13SU3OL0osyS8K5gCKBJYm5pVkllSmMYHUgESCEksy8/MSczKFgZxMIyABkWMFEiGZuanFCG5Afn\
+lqUTA3kOWcCjQlN7Uktag48+////+DQdLuRYm5xQApOiQk\"*)(*]VB*)|>;\n\nmean[g_, \
+\\[Rho]_] := (*FB[*)(((*TB[*)Integrate[(*|*)( g[d] \\[Rho][d] )(*|*), \
+{(*|*)d(*|*),(*|*)-1(*|*),(*|*)1 \
+(*|*)}](*|*)(*1:eJxTTMoPSmNiYGAo5gESnnklqelFiSWpTvkVmYwgURYgEVJUmgoAvmMJeQ==*\
+)(*]TB*))(*,*)/(*,*)((*TB[*)Integrate[(*|*)( \\[Rho][d] )(*|*), \
+{(*|*)d(*|*),(*|*)-1(*|*),(*|*)1 \
+(*|*)}](*|*)(*1:eJxTTMoPSmNiYGAo5gESnnklqelFiSWpTvkVmYwgURYgEVJUmgoAvmMJeQ==*\
+)(*]TB*)))(*]FB*) ", "Display" -> "codemirror", 
+    "Hash" -> "bdc6c41e-c69b-4bd2-ad22-bc1953eb9b64", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> ".md\nNow we have a general function to calcualte mean values. \
+Our center mass position will be", "Display" -> "codemirror", 
+    "Hash" -> "3506e63d-57a3-43e4-9a04-9f4d85e3e54e", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Input", 
+    "UID" -> Null, "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "Now we have a general function to calcualte mean values. Our \
+center mass position will be", "Display" -> "markdown", 
+    "Hash" -> "1f19ad7f-0097-4183-9f33-aa080ab013ed", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "centerOfMass = {0, mean[#&, \
+(*TB[*)Piecewise[{{(*|*)density[\"\|01f9c8\"](*|*),(*|*)# >= \
+0.6(*|*)},{(*|*)density[\"\|01f35e\"](*|*),(*|*)True(*|*)}}](*|*)(*1:eJxTTMoP\
+SmNkYGAo5gESAZmpyanlmcWpTvkVmUxAAQBzVQdd*)(*]TB*) &]};\n\nGraphics @@ {{\n    \
+LightOrange, Rectangle[{-1, 0.7}, {1,1}],\n    Brown, Rectangle[{-1,-1}, {1, \
+0.6}],\n    Red, Disk[centerOfMass, 0.1 {1/3, 1}], \n    \
+AbsoluteDashing[{4}],\n    Line[{{-1,0}, {1,0}}], Line[{{0,1}, {0,-1}}]\n}, \
+AspectRatio->1/3}", "Display" -> "codemirror", 
+    "Hash" -> "3e0f5dd7-0db5-408e-bef5-d2b15ee1a3cb", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "(*VB[*)(Graphics[{RGBColor[1, 0.9, 0.8], Rectangle[{-1, 0.7}, \
+{1, 1}], RGBColor[0.6, 0.4, 0.2], Rectangle[{-1, -1}, {1, 0.6}], RGBColor[1, \
+0, 0], Disk[{0, 0.18461538461538463}, {0.03333333333333333, 0.1}], \
+AbsoluteDashing[{4}], Line[{{-1, 0}, {1, 0}}], Line[{{0, 1}, {0, -1}}]}, \
+AspectRatio -> \
+1/3])(*,*)(*\"1:eJxTTMoPSmNkYGAoZgESHvk5KWlMIB4HkHAvSizIyEwuTuOEyftkFpekMcPkg\
+9ydnPNz8osyQfqLzp4BgTf2RbNmgsBLe4hBIL1BqckliXnpOakQIZhJmf+BoCgNDJ7Zo8mBzAQTmP\
+YVGYPBY5hVN2GMk0TaCSaw2Ac3GIcfMxlgBEKzS2ZxNppRIAVFElULxasWHkfzVpEgGCyEuXinPST\
+w+YGEY1Jxfk5pSapLYnFGZl46IlbAhoIYyEJ5aB7D5k1UlyKClYE0sxjgUYFFHDUog0pzUou5QZ4p\
+LgBGQFBiSWY+IkGBuXmJORBXgMIYAEJenx4=\"*)(*]VB*)", "Display" -> "codemirror", 
+    "Hash" -> "f47e0f76-f4a0-4aad-80ae-bf60fc678b48", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> ".md\n## Theorem of center mass dynamics\nAccoruding to II \
+NEwton's law, we shall write equations\n\n$$\n\\\\alpha\n$$", 
+    "Display" -> "codemirror", "Hash" -> 
+     "90bacf10-3931-4e37-b354-baaa410f2a32", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Input", 
+    "UID" -> Null, "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "## Theorem of center mass dynamics\nAccoruding to II NEwton's \
+law, we shall write equations\n\n$$\n\\\\alpha\n$$", "Display" -> "markdown", 
+    "Hash" -> "3805fb8b-851c-49d8-ad75-bc92da533333", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> ".md\n\n\n!![{\"type\":\"rectangle\",\"version\":195,\"version\
+Nonce\":1346039552,\"isDeleted\":false,\"id\":\"7txQ_q3Pn64HLF3I1qFXa\",\"fil\
+lStyle\":\"solid\",\"strokeWidth\":2,\"strokeStyle\":\"solid\",\"roughness\":\
+1,\"opacity\":100,\"angle\":0,\"x\":319.64453125,\"y\":172.43359375,\"strokeC\
+olor\":\"#846358\",\"backgroundColor\":\"#eaddd7\",\"width\":240.515624999999\
+97,\"height\":49.19921875,\"seed\":1019011328,\"groupIds\":[],\"frameId\":nul\
+l,\"roundness\":null,\"boundElements\":[{\"id\":\"Zb6xWj9NxfJFu0RnMV_BK\",\"t\
+ype\":\"arrow\"},{\"id\":\"NbpdZIEbMrLP32RDcP1MG\",\"type\":\"arrow\"}],\"upd\
+ated\":1746368389381,\"link\":null,\"locked\":false},{\"type\":\"rectangle\",\
+\"version\":474,\"versionNonce\":409960704,\"isDeleted\":false,\"id\":\"Lvoik\
+5AEPjeaZwp1LCRpu\",\"fillStyle\":\"hachure\",\"strokeWidth\":2,\"strokeStyle\
+\":\"solid\",\"roughness\":1,\"opacity\":100,\"angle\":0,\"x\":81.28125,\"y\"\
+:221.626953125,\"strokeColor\":\"#1e1e1e\",\"backgroundColor\":\"#1e1e1e\",\"\
+width\":342.75781249999994,\"height\":15.410156250000007,\"seed\":186687744,\
+\"groupIds\":[],\"frameId\":null,\"roundness\":null,\"boundElements\":[{\"id\
+\":\"vI64NRw9FQJrvyil9xPDx\",\"type\":\"arrow\"}],\"updated\":1746368389381,\
+\"link\":null,\"locked\":false},{\"type\":\"freedraw\",\"version\":133,\"vers\
+ionNonce\":151326464,\"isDeleted\":true,\"id\":\"59Kf8Nf8hHRfsuXscFwx4\",\"fi\
+llStyle\":\"hachure\",\"strokeWidth\":2,\"strokeStyle\":\"solid\",\"roughness\
+\":1,\"opacity\":100,\"angle\":0,\"x\":319.35546875,\"y\":168.2109375,\"strok\
+eColor\":\"#fab005\",\"backgroundColor\":\"#1e1e1e\",\"width\":212.1875,\"hei\
+ght\":7.81640625,\"seed\":17088768,\"groupIds\":[],\"frameId\":null,\"roundne\
+ss\":null,\"boundElements\":[],\"updated\":1746368389381,\"link\":null,\"lock\
+ed\":false,\"points\":[[0,0],[0.29296875,0],[1.390625,0],[3.36328125,0],[9.28\
+515625,0],[12.44921875,0],[15.48828125,0],[18.4375,0],[21.3125,-0.0234375],[2\
+3.71875,-0.15234375],[26.5234375,-0.30859375],[27.546875,-0.3203125],[28.0742\
+1875,-0.3203125],[28.34765625,-0.3203125],[28.59765625,-0.3203125],[29.089843\
+75,-0.3203125],[30.25,-0.3203125],[32.00390625,-0.3203125],[34.04296875,-0.32\
+03125],[36.109375,-0.1640625],[38.45703125,-0.01171875],[41.0234375,-0.011718\
+75],[43.37109375,-0.01171875],[45.8125,-0.01171875],[48.21484375,-0.01171875]\
+,[50.48046875,-0.01171875],[52.59765625,-0.15234375],[54.6328125,-0.4765625],\
+[56.17578125,-0.6640625],[58.3046875,-0.84375],[60.8046875,-1.12890625],[62.5\
+,-1.27734375],[63.953125,-1.3125],[65.22265625,-1.3125],[66.453125,-1.3203125\
+],[67.16015625,-1.3203125],[67.8984375,-1.3203125],[68.81640625,-1.3203125],[\
+69.7265625,-1.25390625],[70.859375,-1.125],[72.20703125,-0.9140625],[73.93359\
+375,-0.609375],[75.68359375,-0.453125],[78.671875,-0.453125],[81.97265625,-0.\
+453125],[84.44921875,-0.453125],[86.6875,-0.453125],[88.3671875,-0.453125],[8\
+9.45703125,-0.453125],[90.03125,-0.453125],[90.59765625,-0.453125],[91.085937\
+5,-0.453125],[91.51171875,-0.453125],[92.1484375,-0.453125],[93.1484375,-0.41\
+40625],[94.5390625,-0.15234375],[96.1171875,0.29296875],[97.96484375,0.746093\
+75],[100.20703125,1.23046875],[102.46875,1.86328125],[104.4921875,2.48828125]\
+,[106.46875,2.95703125],[108.5390625,3.3984375],[111.8046875,4.125],[114.7968\
+75,4.703125],[116.89453125,4.86328125],[119.1015625,5.046875],[121.08984375,5\
+.19140625],[122.75,5.234375],[124.83984375,5.39453125],[127.26953125,5.554687\
+5],[128.77734375,5.70703125],[131.15625,6.01953125],[134.03125,6.171875],[135\
+.81640625,6.171875],[137.21484375,6.31640625],[139.53515625,6.48046875],[142.\
+01953125,6.49609375],[144.30078125,6.49609375],[146.55078125,6.49609375],[148\
+.40625,6.49609375],[151.19140625,6.49609375],[153.53125,6.49609375],[155.2031\
+25,6.453125],[156.953125,6.20703125],[158.7109375,5.89453125],[160.4140625,5.\
+7109375],[161.5703125,5.52734375],[163.7421875,5.22265625],[166.27734375,4.94\
+53125],[168.05078125,4.640625],[169.890625,4.1796875],[171.72265625,3.734375]\
+,[172.9765625,3.41796875],[174.8984375,2.9375],[177.33203125,2.32421875],[178\
+.953125,1.88671875],[180.44140625,1.5859375],[181.93359375,1.37890625],[183.4\
+0625,1.08203125],[184.83984375,0.8828125],[185.8984375,0.87890625],[187.77734\
+375,0.71875],[190.2265625,0.5625],[192.30859375,0.484375],[194.234375,0.33203\
+125],[196.4296875,0.18359375],[199.74609375,-0.19921875],[202.578125,-0.59375\
+],[204.25,-0.859375],[205.48828125,-1.0234375],[206.25390625,-1.0234375],[206\
+.79296875,-1.03515625],[207.109375,-1.03515625],[207.4609375,-1.0390625],[207\
+.82421875,-1.04296875],[208.05078125,-1.04296875],[208.94140625,-0.91796875],\
+[209.625,-0.796875],[210.15234375,-0.671875],[210.56640625,-0.41796875],[211.\
+00390625,-0.125],[211.41796875,0.2890625],[211.78515625,0.73828125],[212.0546\
+875,1.0078125],[212.140625,1.16796875],[212.1875,1.3984375],[212.10546875,1.6\
+1328125],[212.10546875,1.61328125]],\"lastCommittedPoint\":null,\"simulatePre\
+ssure\":true,\"pressures\":[]},{\"type\":\"freedraw\",\"version\":155,\"versi\
+onNonce\":1087856896,\"isDeleted\":false,\"id\":\"JmTvSCWGGDZkQE74BfKAf\",\"f\
+illStyle\":\"hachure\",\"strokeWidth\":2,\"strokeStyle\":\"solid\",\"roughnes\
+s\":1,\"opacity\":100,\"angle\":0,\"x\":340.0859375,\"y\":168.21484375,\"stro\
+keColor\":\"#fab005\",\"backgroundColor\":\"#1e1e1e\",\"width\":200.09765625,\
+\"height\":4.390625,\"seed\":1930182912,\"groupIds\":[],\"frameId\":null,\"ro\
+undness\":null,\"boundElements\":[],\"updated\":1746368389381,\"link\":null,\
+\"locked\":false,\"points\":[[0,0],[0.12109375,0],[0.9140625,0],[5.55859375,0\
+],[8.85546875,0],[12.734375,0],[16.79296875,0],[21.07421875,0],[24.609375,0],\
+[27.91015625,0],[31.12890625,0],[33.55859375,0],[35.72265625,0],[37.56640625,\
+0],[39.140625,0],[40.61328125,0],[42.24609375,0],[44.09765625,0],[46.0859375,\
+0],[47.63671875,0],[50.125,0],[53.3203125,0],[55.671875,0],[58.34765625,0],[6\
+1.0078125,0],[63.27734375,0],[65.13671875,0],[68.03515625,0.19921875],[71.261\
+71875,0.484375],[73.27734375,0.58203125],[75.4296875,0.75],[77.24609375,0.914\
+0625],[78.69140625,0.921875],[81.3671875,0.921875],[84.30078125,1.06640625],[\
+86.41796875,1.2734375],[88.51171875,1.43359375],[89.89453125,1.53125],[91.781\
+25,1.71875],[94.19921875,2.06640625],[95.75,2.328125],[97.27734375,2.49609375\
+],[98.7578125,2.6484375],[100.07421875,2.76953125],[102.49609375,2.9453125],[\
+104.640625,3.0703125],[106.18359375,3.06640625],[108.1015625,3.0859375],[109.\
+70703125,3.0859375],[110.9453125,3.0859375],[112.0703125,3.0859375],[112.8007\
+8125,3.0859375],[113.5703125,3.0859375],[114.81640625,3.0859375],[115.9726562\
+5,2.9453125],[117.15234375,2.796875],[118.359375,2.6640625],[119.87890625,2.4\
+84375],[121.6484375,2.19921875],[123.28515625,1.890625],[124.71875,1.7109375]\
+,[125.984375,1.42578125],[127.06640625,1.16796875],[128.0234375,1.05078125],[\
+128.73046875,1.01171875],[129.390625,1.01171875],[129.9921875,1.00390625],[13\
+0.359375,1.00390625],[130.83203125,1],[131.46484375,1],[132.63671875,0.851562\
+5],[134.5,0.546875],[136.46484375,0.28515625],[138.92578125,0.109375],[141.78\
+125,-0.07421875],[144.25,-0.37109375],[147.1015625,-0.57421875],[150.23046875\
+,-0.7578125],[153.31640625,-0.9375],[156.296875,-0.95703125],[158.921875,-0.9\
+5703125],[161.34375,-0.9609375],[163.546875,-0.9609375],[165.73828125,-1.1132\
+8125],[167.75,-1.28125],[169.203125,-1.296875],[170.46875,-1.296875],[171.5,-\
+1.30078125],[172.29296875,-1.30078125],[173.01171875,-1.3046875],[173.5234375\
+,-1.3046875],[173.921875,-1.3046875],[174.30078125,-1.3046875],[174.69140625,\
+-1.3046875],[175.04296875,-1.3046875],[175.625,-1.3046875],[176.6015625,-1.30\
+46875],[177.671875,-1.3046875],[178.875,-1.3046875],[180.375,-1.234375],[181.\
+98046875,-1.08984375],[183.375,-1.01953125],[184.65625,-1.01953125],[185.8007\
+8125,-1.01953125],[187.01171875,-1.01953125],[188.109375,-1.01953125],[188.91\
+40625,-1.01953125],[189.546875,-1.01953125],[189.91796875,-1.01953125],[190.3\
+4765625,-0.89453125],[190.71484375,-0.7734375],[190.9453125,-0.77734375],[191\
+.3203125,-0.77734375],[191.8203125,-0.77734375],[192.31640625,-0.77734375],[1\
+93.2265625,-0.73828125],[194.48046875,-0.60546875],[195.80859375,-0.45703125]\
+,[197.51953125,-0.15625],[198.8046875,0.0703125],[199.32421875,0.1953125],[19\
+9.7578125,0.4296875],[200.09765625,0.58203125],[200.0234375,0.734375],[200.02\
+34375,0.734375]],\"lastCommittedPoint\":null,\"simulatePressure\":true,\"pres\
+sures\":[]},{\"type\":\"ellipse\",\"version\":87,\"versionNonce\":1670065920,\
+\"isDeleted\":false,\"id\":\"wxekofiHb25gS641iYvYq\",\"fillStyle\":\"solid\",\
+\"strokeWidth\":2,\"strokeStyle\":\"solid\",\"roughness\":1,\"opacity\":100,\
+\"angle\":0,\"x\":436.33203125,\"y\":182.6328125,\"strokeColor\":\"#e03131\",\
+\"backgroundColor\":\"#e03131\",\"width\":12.40625,\"height\":12.40625,\"seed\
+\":1395085056,\"groupIds\":[],\"frameId\":null,\"roundness\":null,\"boundElem\
+ents\":[],\"updated\":1746368389381,\"link\":null,\"locked\":false},{\"type\"\
+:\"arrow\",\"version\":66,\"versionNonce\":1363362048,\"isDeleted\":false,\"i\
+d\":\"lbd6w_Kv0E4chypwrLHty\",\"fillStyle\":\"solid\",\"strokeWidth\":2,\"str\
+okeStyle\":\"solid\",\"roughness\":1,\"opacity\":100,\"angle\":0,\"x\":443.01\
+171875,\"y\":189.6171875,\"strokeColor\":\"#e03131\",\"backgroundColor\":\"#e\
+03131\",\"width\":0,\"height\":96.5078125,\"seed\":1387663104,\"groupIds\":[]\
+,\"frameId\":null,\"roundness\":null,\"boundElements\":[],\"updated\":1746368\
+389381,\"link\":null,\"locked\":false,\"startBinding\":null,\"endBinding\":nu\
+ll,\"lastCommittedPoint\":null,\"startArrowhead\":null,\"endArrowhead\":\"tri\
+angle\",\"points\":[[0,0],[0,96.5078125]]},{\"type\":\"arrow\",\"version\":16\
+2,\"versionNonce\":1213026048,\"isDeleted\":false,\"id\":\"Yig1G2J8Q-ub98Mk5m\
+UcU\",\"fillStyle\":\"solid\",\"strokeWidth\":2,\"strokeStyle\":\"solid\",\"r\
+oughness\":1,\"opacity\":100,\"angle\":0,\"x\":442.37239048760875,\"y\":188.0\
+7421875,\"strokeColor\":\"#e03131\",\"backgroundColor\":\"#e03131\",\"width\"\
+:0,\"height\":79.9296875,\"seed\":289964288,\"groupIds\":[],\"frameId\":null,\
+\"roundness\":null,\"boundElements\":[],\"updated\":1746368389381,\"link\":nu\
+ll,\"locked\":false,\"startBinding\":null,\"endBinding\":null,\"lastCommitted\
+Point\":null,\"startArrowhead\":null,\"endArrowhead\":\"triangle\",\"points\"\
+:[[0,0],[0,-79.9296875]]},{\"type\":\"text\",\"version\":58,\"versionNonce\":\
+691216640,\"isDeleted\":false,\"id\":\"P-ftQ-3BBOM8AT1qIn9OK\",\"fillStyle\":\
+\"solid\",\"strokeWidth\":2,\"strokeStyle\":\"solid\",\"roughness\":1,\"opaci\
+ty\":100,\"angle\":0,\"x\":462.82421875,\"y\":106.23828125,\"strokeColor\":\"\
+#e03131\",\"backgroundColor\":\"#e03131\",\"width\":12.879989624023438,\"heig\
+ht\":25,\"seed\":1935679744,\"groupIds\":[],\"frameId\":null,\"roundness\":nu\
+ll,\"boundElements\":[],\"updated\":1746368389381,\"link\":null,\"locked\":fa\
+lse,\"fontSize\":20,\"fontFamily\":1,\"text\":\"N\",\"textAlign\":\"left\",\"\
+verticalAlign\":\"top\",\"containerId\":null,\"originalText\":\"N\",\"lineHei\
+ght\":1.25,\"baseline\":18},{\"type\":\"text\",\"version\":72,\"versionNonce\
+\":264990464,\"isDeleted\":false,\"id\":\"sYWxjAgI0cyyKv1s5SjCg\",\"fillStyle\
+\":\"solid\",\"strokeWidth\":2,\"strokeStyle\":\"solid\",\"roughness\":1,\"op\
+acity\":100,\"angle\":0,\"x\":463.265625,\"y\":265.30078125,\"strokeColor\":\
+\"#e03131\",\"backgroundColor\":\"#e03131\",\"width\":22.679977416992188,\"he\
+ight\":25,\"seed\":944090880,\"groupIds\":[],\"frameId\":null,\"roundness\":n\
+ull,\"boundElements\":[],\"updated\":1746368389381,\"link\":null,\"locked\":f\
+alse,\"fontSize\":20,\"fontFamily\":1,\"text\":\"mg\",\"textAlign\":\"left\",\
+\"verticalAlign\":\"top\",\"containerId\":null,\"originalText\":\"mg\",\"line\
+Height\":1.25,\"baseline\":18},{\"type\":\"arrow\",\"version\":97,\"versionNo\
+nce\":942080256,\"isDeleted\":false,\"id\":\"Zb6xWj9NxfJFu0RnMV_BK\",\"fillSt\
+yle\":\"solid\",\"strokeWidth\":2,\"strokeStyle\":\"solid\",\"roughness\":1,\
+\"opacity\":100,\"angle\":0,\"x\":442.01171875,\"y\":189.36328125,\"strokeCol\
+or\":\"#1971c2\",\"backgroundColor\":\"#e03131\",\"width\":46.31640625,\"heig\
+ht\":34.2109375,\"seed\":381133056,\"groupIds\":[],\"frameId\":null,\"roundne\
+ss\":null,\"boundElements\":[],\"updated\":1746368389381,\"link\":null,\"lock\
+ed\":false,\"startBinding\":null,\"endBinding\":{\"elementId\":\"7txQ_q3Pn64H\
+LF3I1qFXa\",\"focus\":-0.053884006562655615,\"gap\":1.94140625},\"lastCommitt\
+edPoint\":null,\"startArrowhead\":null,\"endArrowhead\":\"triangle\",\"points\
+\":[[0,0],[-46.31640625,34.2109375]]},{\"type\":\"arrow\",\"version\":192,\"v\
+ersionNonce\":42307328,\"isDeleted\":false,\"id\":\"NbpdZIEbMrLP32RDcP1MG\",\
+\"fillStyle\":\"solid\",\"strokeWidth\":2,\"strokeStyle\":\"solid\",\"roughne\
+ss\":1,\"opacity\":100,\"angle\":0,\"x\":442.216796875,\"y\":188.48828125,\"s\
+trokeColor\":\"#1971c2\",\"backgroundColor\":\"#e03131\",\"width\":77.6914062\
+5,\"height\":34.2109375,\"seed\":162291968,\"groupIds\":[],\"frameId\":null,\
+\"roundness\":null,\"boundElements\":[],\"updated\":1746368389381,\"link\":nu\
+ll,\"locked\":false,\"startBinding\":null,\"endBinding\":{\"elementId\":\"7tx\
+Q_q3Pn64HLF3I1qFXa\",\"focus\":-0.09703854449012646,\"gap\":1.06640625},\"las\
+tCommittedPoint\":null,\"startArrowhead\":null,\"endArrowhead\":\"triangle\",\
+\"points\":[[0,0],[-77.69140625,34.2109375]]},{\"type\":\"arrow\",\"version\"\
+:314,\"versionNonce\":2107564288,\"isDeleted\":false,\"id\":\"vI64NRw9FQJrvyi\
+l9xPDx\",\"fillStyle\":\"solid\",\"strokeWidth\":2,\"strokeStyle\":\"solid\",\
+\"roughness\":1,\"opacity\":100,\"angle\":0,\"x\":442.708984375,\"y\":186.527\
+34375,\"strokeColor\":\"#1971c2\",\"backgroundColor\":\"#e03131\",\"width\":1\
+12.265625,\"height\":34.2109375,\"seed\":1028653312,\"groupIds\":[],\"frameId\
+\":null,\"roundness\":null,\"boundElements\":[],\"updated\":1746368389382,\"l\
+ink\":null,\"locked\":false,\"startBinding\":null,\"endBinding\":{\"elementId\
+\":\"Lvoik5AEPjeaZwp1LCRpu\",\"focus\":0.25211673123603856,\"gap\":1},\"lastC\
+ommittedPoint\":null,\"startArrowhead\":null,\"endArrowhead\":\"triangle\",\"\
+points\":[[0,0],[-112.265625,34.2109375]]},{\"type\":\"ellipse\",\"version\":\
+162,\"versionNonce\":453832448,\"isDeleted\":true,\"id\":\"TJ-flb0wxcQmP3YaQH\
+ddJ\",\"fillStyle\":\"cross-hatch\",\"strokeWidth\":2,\"strokeStyle\":\"solid\
+\",\"roughness\":1,\"opacity\":100,\"angle\":0,\"x\":286.77291721811594,\"y\"\
+:86.32708443623197,\"strokeColor\":\"#9c36b5\",\"backgroundColor\":\"transpar\
+ent\",\"width\":13.892086864014942,\"height\":13.892086864014942,\"seed\":124\
+6781696,\"groupIds\":[\"iJj8XT_ddkCKxfFds7MIP\"],\"frameId\":null,\"roundness\
+\":null,\"boundElements\":[],\"updated\":1746368401243,\"link\":null,\"locked\
+\":false},{\"type\":\"line\",\"version\":122,\"versionNonce\":465404160,\"isD\
+eleted\":true,\"id\":\"U1zIP65uhsj-dxHP78_ay\",\"fillStyle\":\"cross-hatch\",\
+\"strokeWidth\":2,\"strokeStyle\":\"solid\",\"roughness\":1,\"opacity\":100,\
+\"angle\":0,\"x\":298.0883341142196,\"y\":98.28689474389058,\"strokeColor\":\
+\"#9c36b5\",\"backgroundColor\":\"transparent\",\"width\":9.35643852892449,\"\
+height\":9.356438528924498,\"seed\":282517760,\"groupIds\":[\"iJj8XT_ddkCKxfF\
+ds7MIP\"],\"frameId\":null,\"roundness\":null,\"boundElements\":[],\"updated\
+\":1746368401243,\"link\":null,\"locked\":false,\"startBinding\":null,\"endBi\
+nding\":null,\"lastCommittedPoint\":null,\"startArrowhead\":null,\"endArrowhe\
+ad\":null,\"points\":[[0,0],[-9.35643852892449,-9.356438528924498]]},{\"type\
+\":\"line\",\"version\":287,\"versionNonce\":697765632,\"isDeleted\":true,\"i\
+d\":\"BAKiRVH2SX_STH-Ska5fU\",\"fillStyle\":\"cross-hatch\",\"strokeWidth\":2\
+,\"strokeStyle\":\"solid\",\"roughness\":1,\"opacity\":100,\"angle\":0,\"x\":\
+288.69777833822525,\"y\":98.20532508211436,\"strokeColor\":\"#9c36b5\",\"back\
+groundColor\":\"transparent\",\"width\":9.699342839576206,\"height\":9.699342\
+839576214,\"seed\":143294720,\"groupIds\":[\"iJj8XT_ddkCKxfFds7MIP\"],\"frame\
+Id\":null,\"roundness\":null,\"boundElements\":[],\"updated\":1746368401243,\
+\"link\":null,\"locked\":false,\"startBinding\":null,\"endBinding\":null,\"la\
+stCommittedPoint\":null,\"startArrowhead\":null,\"endArrowhead\":null,\"point\
+s\":[[0,0],[9.699342839576206,-9.699342839576214]]},{\"type\":\"ellipse\",\"v\
+ersion\":533,\"versionNonce\":598589696,\"isDeleted\":true,\"id\":\"UODCawI6x\
+o4EkDHqLFqvx\",\"fillStyle\":\"cross-hatch\",\"strokeWidth\":2,\"strokeStyle\
+\":\"solid\",\"roughness\":1,\"opacity\":100,\"angle\":0,\"x\":330.2618767542\
+395,\"y\":187.98622556061466,\"strokeColor\":\"#9c36b5\",\"backgroundColor\":\
+\"transparent\",\"width\":13.892086864014942,\"height\":13.892086864014942,\"\
+seed\":1705935104,\"groupIds\":[\"A_noQ4FiE79AU0uk8eAlD\"],\"frameId\":null,\
+\"roundness\":null,\"boundElements\":[],\"updated\":1746368420581,\"link\":nu\
+ll,\"locked\":false},{\"type\":\"line\",\"version\":488,\"versionNonce\":1307\
+31776,\"isDeleted\":true,\"id\":\"bq9RJQ3daepibaenax4MR\",\"fillStyle\":\"cro\
+ss-hatch\",\"strokeWidth\":2,\"strokeStyle\":\"solid\",\"roughness\":1,\"opac\
+ity\":100,\"angle\":0,\"x\":341.57729365034317,\"y\":199.94603586827327,\"str\
+okeColor\":\"#9c36b5\",\"backgroundColor\":\"transparent\",\"width\":9.356438\
+52892449,\"height\":9.356438528924498,\"seed\":238444800,\"groupIds\":[\"A_no\
+Q4FiE79AU0uk8eAlD\"],\"frameId\":null,\"roundness\":null,\"boundElements\":[]\
+,\"updated\":1746368420581,\"link\":null,\"locked\":false,\"startBinding\":nu\
+ll,\"endBinding\":null,\"lastCommittedPoint\":null,\"startArrowhead\":null,\"\
+endArrowhead\":null,\"points\":[[0,0],[-9.35643852892449,-9.356438528924498]]\
+},{\"type\":\"line\",\"version\":653,\"versionNonce\":1246601472,\"isDeleted\
+\":true,\"id\":\"vMzdpthmELZQeOpXoags7\",\"fillStyle\":\"cross-hatch\",\"stro\
+keWidth\":2,\"strokeStyle\":\"solid\",\"roughness\":1,\"opacity\":100,\"angle\
+\":0,\"x\":332.1867378743488,\"y\":199.86446620649704,\"strokeColor\":\"#9c36\
+b5\",\"backgroundColor\":\"transparent\",\"width\":9.699342839576206,\"height\
+\":9.699342839576214,\"seed\":448938240,\"groupIds\":[\"A_noQ4FiE79AU0uk8eAlD\
+\"],\"frameId\":null,\"roundness\":null,\"boundElements\":[],\"updated\":1746\
+368420581,\"link\":null,\"locked\":false,\"startBinding\":null,\"endBinding\"\
+:null,\"lastCommittedPoint\":null,\"startArrowhead\":null,\"endArrowhead\":nu\
+ll,\"points\":[[0,0],[9.699342839576206,-9.699342839576214]]},{\"type\":\"fre\
+edraw\",\"version\":35,\"versionNonce\":919105280,\"isDeleted\":false,\"id\":\
+\"Uv6pdY310fxNdRgqUj3Ny\",\"fillStyle\":\"cross-hatch\",\"strokeWidth\":1,\"s\
+trokeStyle\":\"solid\",\"roughness\":1,\"opacity\":100,\"angle\":0,\"x\":420.\
+95019537865267,\"y\":144.1505690760898,\"strokeColor\":\"#9c36b5\",\"backgrou\
+ndColor\":\"transparent\",\"width\":75.33202518652485,\"height\":86.351403912\
+25514,\"seed\":568143616,\"groupIds\":[],\"frameId\":null,\"roundness\":null,\
+\"boundElements\":[],\"updated\":1746368412724,\"link\":null,\"locked\":false\
+,\"points\":[[0,0],[0.16009994062352462,0],[1.2032511162488504,0],[3.77985953\
+56591136,0],[7.962470484449398,0],[13.595987145140555,0],[20.27015341988482,0\
+],[27.90992246151484,0],[35.24450099133122,0],[42.574076398003115,0.542838861\
+1767332],[49.731044056190285,2.5415865573988583],[55.319532608581085,5.468413\
+596923142],[60.3151510683503,9.00812322164694],[65.1631773953572,13.681040238\
+596808],[68.68037296593081,18.273907285234912],[71.23196576961863,23.22449763\
+6703745],[73.16066974181797,28.50779567728091],[74.22133184844898,34.61660903\
+6698236],[74.98680968955534,41.50340804508315],[75.33202518652485,50.30890477\
+9378395],[75.19944242319599,57.88113165855788],[74.3614192964946,63.357049940\
+197754],[72.7203949051032,69.14066029522351],[70.24635051015491,73.8260851200\
+3458],[67.51464527326556,77.81357426618987],[64.73791192807585,80.52026388735\
+678],[62.1312847697987,82.30387728836601],[59.35204986303677,83.7497798771224\
+5],[56.77794300519872,84.99805910167169],[54.61159068363634,85.69849634189973\
+],[52.50527583980772,86.35140391225514],[52.50527583980772,86.35140391225514]\
+],\"lastCommittedPoint\":null,\"simulatePressure\":true,\"pressures\":[]},{\"\
+type\":\"freedraw\",\"version\":55,\"versionNonce\":1266286848,\"isDeleted\":\
+false,\"id\":\"ic2LQwJ1_zbK6U2zEsB3k\",\"fillStyle\":\"cross-hatch\",\"stroke\
+Width\":1,\"strokeStyle\":\"solid\",\"roughness\":1,\"opacity\":100,\"angle\"\
+:0,\"x\":474.29849746830627,\"y\":218.48697275686197,\"strokeColor\":\"#9c36b\
+5\",\"backgroundColor\":\"transparent\",\"width\":20.79047822691132,\"height\
+\":18.078785482599955,\"seed\":140726016,\"groupIds\":[],\"frameId\":null,\"r\
+oundness\":null,\"boundElements\":[],\"updated\":1746368412724,\"link\":null,\
+\"locked\":false,\"points\":[[0,0],[0,0.08004997031176231],[0,0.2326452262185\
+7964],[0,0.5253279301710165],[0,1.2682917171271697],[-0.09005621660071483,2.5\
+941193504159514],[-0.4302685904257828,4.315193712119111],[-0.8905559197185084\
+,5.913691556782368],[-1.1206995843648428,6.836767776940036],[-1.4308932193229\
+68,8.20011883381244],[-1.8211368245928838,9.79611511690345],[-2.0112555040833\
+513,10.549085150148585],[-2.1863648141403473,11.06940995717514],[-2.273919469\
+1688454,11.437139508294848],[-2.276421030741119,11.604744133635137],[-2.27642\
+1030741119,11.799865936270095],[-2.278922592313336,12.120065817517172],[-2.43\
+65209713646436,12.365218851597007],[-2.6116302814216397,12.557839092659691],[\
+-2.629141212427328,12.8655311660456],[-2.771730222045221,13.323316933766051],\
+[-3.144462896309392,14.076286967011185],[-3.4796721469899694,14.7266929757943\
+5],[-3.6422736491857677,15.054397541758192],[-3.747339235219954,15.3270677531\
+32667],[-3.8098782745260564,15.547205171490049],[-3.824887643959471,15.729819\
+16626378],[-3.7598470430811517,15.79986289028659],[-3.552217432584996,15.8098\
+69136575571],[-3.0694160491420917,15.817373821292307],[-2.3314553853304574,15\
+.817373821292307],[-1.468416642906618,15.817373821292307],[-0.377735797408661\
+26,15.817373821292307],[1.1982479931044168,15.817373821292307],[3.06691448756\
+9875,15.817373821292307],[4.885549750590542,15.914934722609786],[6.8717896389\
+51441,16.185103372412016],[8.888048266179283,16.412745475486133],[10.53657734\
+2287387,16.58785478554313],[11.744831581680785,16.80298908075602],[13.1932357\
+32009441,17.00811712967996],[14.434010271841942,17.193232686025937],[14.97684\
+9133018675,17.27828577948219],[15.342077122566138,17.285790464198925],[15.587\
+230156645944,17.365840434510687],[15.929944092043229,17.52594037513424],[16.2\
+05115864989978,17.676034069468813],[16.32268925888542,17.793607463364253],[16\
+.510306376803612,17.88116211839275],[16.755459410883418,17.98372614285472],[1\
+6.965590582951847,18.061274551594238],[16.908054666790235,18.078785482599955]\
+,[16.908054666790235,18.078785482599955]],\"lastCommittedPoint\":null,\"simul\
+atePressure\":true,\"pressures\":[]},{\"type\":\"text\",\"version\":71,\"vers\
+ionNonce\":862719744,\"isDeleted\":false,\"id\":\"7-quI_DDMdjjFjjrYNo7c\",\"f\
+illStyle\":\"cross-hatch\",\"strokeWidth\":1,\"strokeStyle\":\"solid\",\"roug\
+hness\":1,\"opacity\":100,\"angle\":0,\"x\":345.3480015423256,\"y\":188.10800\
+90235433,\"strokeColor\":\"#1971c2\",\"backgroundColor\":\"transparent\",\"wi\
+dth\":8.599990844726562,\"height\":25,\"seed\":1374781696,\"groupIds\":[],\"f\
+rameId\":null,\"roundness\":null,\"boundElements\":[],\"updated\":17463684293\
+48,\"link\":null,\"locked\":false,\"fontSize\":20,\"fontFamily\":1,\"text\":\
+\"r\",\"textAlign\":\"left\",\"verticalAlign\":\"top\",\"containerId\":null,\
+\"originalText\":\"r\",\"lineHeight\":1.25,\"baseline\":18},{\"type\":\"text\
+\",\"version\":32,\"versionNonce\":1192652544,\"isDeleted\":false,\"id\":\"-p\
+Z_OPTamgWn9wz41tYnI\",\"fillStyle\":\"cross-hatch\",\"strokeWidth\":1,\"strok\
+eStyle\":\"solid\",\"roughness\":1,\"opacity\":100,\"angle\":0,\"x\":503.1640\
+16450418,\"y\":225.9791496657297,\"strokeColor\":\"#9c36b5\",\"backgroundColo\
+r\":\"transparent\",\"width\":12.17999267578125,\"height\":25,\"seed\":126958\
+0032,\"groupIds\":[],\"frameId\":null,\"roundness\":null,\"boundElements\":[]\
+,\"updated\":1746368441275,\"link\":null,\"locked\":false,\"fontSize\":20,\"f\
+ontFamily\":1,\"text\":\"w\",\"textAlign\":\"left\",\"verticalAlign\":\"top\"\
+,\"containerId\":null,\"originalText\":\"w\",\"lineHeight\":1.25,\"baseline\"\
+:18},{\"type\":\"rectangle\",\"version\":93,\"versionNonce\":849101056,\"isDe\
+leted\":false,\"id\":\"AGmTDj_NQeAJ4g5U9j4p8\",\"fillStyle\":\"solid\",\"stro\
+keWidth\":2,\"strokeStyle\":\"solid\",\"roughness\":1,\"opacity\":100,\"angle\
+\":0,\"x\":62.171875,\"y\":63.60546875,\"strokeColor\":\"transparent\",\"back\
+groundColor\":\"transparent\",\"width\":750.875,\"height\":313.359375,\"seed\
+\":1254080768,\"groupIds\":[],\"frameId\":null,\"roundness\":{\"type\":3},\"b\
+oundElements\":[],\"updated\":1746368470986,\"link\":null,\"locked\":false}]"\
+, "Display" -> "codemirror", "Hash" -> 
+     "ad030ac5-2fb2-4201-89ff-c645e3e619c4", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Input", 
+    "UID" -> Null, "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "\n\n\n<div class=\"text-center w-full\"><svg version=\"1.1\" \
+xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 770.875 333.359375\">\n  \
+<!-- svg-source:excalidraw -->\n  \n  <defs>\n    <style \
+class=\"style-fonts\">\n      @font-face {\n        font-family: \
+\"Virgil\";\n        src: \
+url(\"https://unpkg.com/@excalidraw/excalidraw@undefined/dist/excalidraw-asse\
+ts/Virgil.woff2\");\n      }\n      @font-face {\n        font-family: \
+\"Cascadia\";\n        src: \
+url(\"https://unpkg.com/@excalidraw/excalidraw@undefined/dist/excalidraw-asse\
+ts/Cascadia.woff2\");\n      }\n      @font-face {\n        font-family: \
+\"Assistant\";\n        src: \
+url(\"https://unpkg.com/@excalidraw/excalidraw@undefined/dist/excalidraw-asse\
+ts/Assistant-Regular.woff2\");\n      }\n    </style>\n    \n  </defs>\n  <g \
+stroke-linecap=\"round\" transform=\"translate(267.47265625 118.828125) \
+rotate(0 120.2578125 24.599609375)\"><path d=\"M-0.66 -1.71 L240.23 0.44 \
+L240.44 48.75 L-1.76 48.82\" stroke=\"none\" stroke-width=\"0\" \
+fill=\"#eaddd7\"></path><path d=\"M0 0 C59.75 -3.47, 123.46 -1.89, 240.52 0 \
+M0 0 C57.89 -1.44, 115.84 -0.8, 240.52 0 M240.52 0 C239.42 12.98, 240.9 \
+30.77, 240.52 49.2 M240.52 0 C241.08 13.3, 240.65 27.6, 240.52 49.2 M240.52 \
+49.2 C191.48 46.84, 143.22 47.72, 0 49.2 M240.52 49.2 C172.61 48.55, 105.99 \
+47.81, 0 49.2 M0 49.2 C1.47 33.19, 1.47 17.17, 0 0 M0 49.2 C-0.51 31.19, 0.25 \
+14.53, 0 0\" stroke=\"#846358\" stroke-width=\"2\" \
+fill=\"none\"></path></g><g stroke-linecap=\"round\" \
+transform=\"translate(29.109375 168.021484375) rotate(0 171.37890624999997 \
+7.705078125)\"><path d=\"M0 0 C0 0, 0 0, 0 0 M0 0 C0 0, 0 0, 0 0 M0.13 12.04 \
+C1.64 9.63, 4.09 7.38, 10.63 -0.03 M0.13 12.04 C3.25 8.23, 6.38 4.82, 10.63 \
+-0.03 M7.48 15.78 C9.84 11.5, 13.61 8.26, 21.26 -0.07 M7.48 15.78 C10.35 \
+12.41, 13.52 9.42, 21.26 -0.07 M18.11 15.75 C22.93 11.1, 28.06 5.52, 31.89 \
+-0.1 M18.11 15.75 C22.86 10.37, 27.94 5.07, 31.89 -0.1 M28.74 15.71 C32.77 \
+11.83, 35.71 8.77, 42.52 -0.14 M28.74 15.71 C34.23 9.86, 38.77 4.54, 42.52 \
+-0.14 M39.37 15.68 C42.26 12.37, 45.09 8.46, 53.15 -0.17 M39.37 15.68 C42.94 \
+11.13, 47.07 6.44, 53.15 -0.17 M50 15.64 C54.82 10.81, 58.13 6.1, 63.78 -0.21 \
+M50 15.64 C54.47 10.14, 59.97 4.52, 63.78 -0.21 M59.98 16.36 C65.37 9.38, \
+71.41 4.54, 74.41 -0.24 M59.98 16.36 C63.63 11.87, 67.2 7.49, 74.41 -0.24 \
+M70.61 16.33 C76.41 9.55, 80.77 3.99, 85.04 -0.28 M70.61 16.33 C75.54 11.24, \
+79.94 5.64, 85.04 -0.28 M81.24 16.29 C86.7 10.18, 90.65 5.63, 95.67 -0.31 \
+M81.24 16.29 C85.21 11.82, 88.68 7.58, 95.67 -0.31 M91.87 16.26 C96.86 9.05, \
+103.66 2.91, 106.3 -0.34 M91.87 16.26 C95.43 12.58, 98.59 8.55, 106.3 -0.34 \
+M102.5 16.22 C106.93 12.52, 109.53 7.11, 116.27 0.38 M102.5 16.22 C105.05 \
+13.38, 108.27 9.76, 116.27 0.38 M113.13 16.19 C116.48 12.6, 120.34 7.03, \
+126.91 0.34 M113.13 16.19 C116.43 12.88, 119.56 9.3, 126.91 0.34 M123.76 \
+16.16 C128.19 10.98, 132.61 6.8, 137.54 0.31 M123.76 16.16 C127.23 11.5, \
+131.54 7.13, 137.54 0.31 M134.39 16.12 C139.96 9.63, 144.74 3.76, 148.17 0.27 \
+M134.39 16.12 C138.09 11.53, 142.02 7.69, 148.17 0.27 M145.02 16.09 C150.95 \
+10.3, 155.33 4.59, 158.8 0.24 M145.02 16.09 C147.99 12.78, 151.21 8.35, 158.8 \
+0.24 M155.65 16.05 C160.51 11.15, 163.54 7.63, 169.43 0.2 M155.65 16.05 \
+C160.11 11.06, 163.92 6.12, 169.43 0.2 M166.28 16.02 C169.1 11.76, 174.08 \
+7.83, 180.06 0.17 M166.28 16.02 C169.4 12.81, 172.5 9.55, 180.06 0.17 M176.91 \
+15.98 C180.31 10.9, 185.66 6.93, 190.69 0.13 M176.91 15.98 C180.97 10.97, \
+186.13 5.79, 190.69 0.13 M187.54 15.95 C191.3 11.52, 196.23 7.21, 201.32 0.1 \
+M187.54 15.95 C193.06 9.68, 198.17 3.3, 201.32 0.1 M198.17 15.91 C202.18 \
+9.54, 207.12 5.2, 211.95 0.06 M198.17 15.91 C201.34 11.78, 204.73 7.89, \
+211.95 0.06 M208.8 15.88 C214.05 9.95, 219.52 4.01, 222.58 0.03 M208.8 15.88 \
+C212.79 11.2, 217.9 5.49, 222.58 0.03 M219.43 15.84 C222.03 12.17, 226.32 \
+9.63, 233.21 0 M219.43 15.84 C222.46 11.67, 226.12 8.15, 233.21 0 M230.06 \
+15.81 C233.41 10.44, 238.49 5.69, 243.84 -0.04 M230.06 15.81 C235.09 10.7, \
+239.12 4.78, 243.84 -0.04 M240.69 15.78 C244.35 11.12, 246.48 9.07, 254.47 \
+-0.07 M240.69 15.78 C244.19 11.3, 248.53 6.9, 254.47 -0.07 M251.32 15.74 \
+C255.89 8.89, 262.36 2.67, 265.1 -0.11 M251.32 15.74 C254.2 12.71, 256.73 \
+8.56, 265.1 -0.11 M261.95 15.71 C265.8 10.6, 271.49 4.64, 275.73 -0.14 \
+M261.95 15.71 C265.82 11.02, 269.68 6.21, 275.73 -0.14 M272.58 15.67 C277.23 \
+8.98, 283.35 2.72, 286.36 -0.18 M272.58 15.67 C277.13 10.38, 280.6 6.35, \
+286.36 -0.18 M283.21 15.64 C286.62 12.15, 290.05 5.95, 296.99 -0.21 M283.21 \
+15.64 C286.38 11.35, 289.96 7.27, 296.99 -0.21 M293.18 16.36 C295.92 11.62, \
+301.34 7.44, 307.62 -0.25 M293.18 16.36 C298.54 10.75, 304.31 3.75, 307.62 \
+-0.25 M303.81 16.32 C310.24 10.13, 314.6 3.59, 318.25 -0.28 M303.81 16.32 \
+C308.31 11.13, 312.2 6.23, 318.25 -0.28 M314.44 16.29 C319.15 11.41, 323.97 \
+6.32, 328.88 -0.31 M314.44 16.29 C319.25 10.5, 324.58 4.72, 328.88 -0.31 \
+M325.07 16.25 C329.17 12.59, 330.73 9.57, 339.51 -0.35 M325.07 16.25 C327.88 \
+12.93, 331.83 9.04, 339.51 -0.35 M335.7 16.22 C338.16 13.44, 340.62 10.93, \
+342.92 7.92 M335.7 16.22 C337.5 14.32, 338.82 12.37, 342.92 7.92\" \
+stroke=\"#1e1e1e\" stroke-width=\"1\" fill=\"none\"></path><path d=\"M0 0 \
+C93.25 1.49, 186.46 1.13, 342.76 0 M0 0 C99.2 -1.03, 198.53 -1.15, 342.76 0 \
+M342.76 0 C343.21 4.97, 342.29 11.06, 342.76 15.41 M342.76 0 C342.78 4.41, \
+343.07 9.2, 342.76 15.41 M342.76 15.41 C209.74 15.87, 76.35 16.38, 0 15.41 \
+M342.76 15.41 C233.13 15.87, 123.6 16.12, 0 15.41 M0 15.41 C-0.1 11.62, -0.21 \
+8.29, 0 0 M0 15.41 C-0.16 12.32, -0.29 8.52, 0 0\" stroke=\"#1e1e1e\" \
+stroke-width=\"2\" fill=\"none\"></path></g><g \
+transform=\"translate(287.9140625 114.609375) rotate(0 100.048828125 \
+0.890625)\" stroke=\"none\"><path fill=\"#fab005\" d=\"M 0,-5.29 Q 0,-5.29 \
+2.54,-5.30 5.09,-5.31 7.28,-5.36 9.48,-5.40 13.71,-5.48 17.93,-5.56 \
+21.61,-5.66 25.30,-5.75 28.38,-5.85 31.47,-5.95 33.74,-6.05 36.01,-6.14 \
+38.53,-6.26 41.04,-6.38 43.71,-6.47 46.38,-6.56 48.83,-6.60 51.28,-6.64 \
+53.85,-6.67 56.41,-6.70 58.95,-6.73 61.48,-6.76 63.96,-6.72 66.44,-6.69 \
+69.17,-6.52 71.91,-6.35 74.11,-6.21 76.31,-6.07 79.45,-6.01 82.59,-5.95 \
+84.99,-5.80 87.39,-5.65 90.43,-5.38 93.46,-5.12 95.94,-4.83 98.41,-4.55 \
+101.00,-4.36 103.58,-4.17 106.04,-4.15 108.50,-4.12 110.72,-4.15 112.94,-4.18 \
+115.48,-4.44 118.02,-4.69 120.28,-5.05 122.53,-5.41 124.89,-5.85 127.25,-6.28 \
+129.80,-6.48 132.34,-6.69 134.48,-6.93 136.63,-7.16 139.14,-7.35 141.65,-7.54 \
+144.60,-7.72 147.55,-7.90 150.70,-8.00 153.85,-8.10 156.62,-8.11 159.38,-8.12 \
+161.58,-8.16 163.77,-8.21 166.51,-8.34 169.24,-8.48 171.39,-8.54 173.53,-8.59 \
+175.80,-8.63 178.06,-8.68 180.40,-8.57 182.74,-8.47 185.01,-8.46 187.27,-8.46 \
+189.72,-8.29 192.16,-8.12 194.85,-7.94 197.53,-7.77 201.49,-6.13 205.45,-4.49 \
+206.13,-3.48 206.81,-2.47 207.14,-1.29 207.46,-0.12 207.40,1.09 207.33,2.31 \
+206.88,3.44 206.42,4.57 205.63,5.50 204.84,6.43 203.80,7.06 202.75,7.68 \
+201.56,7.94 200.37,8.20 199.16,8.07 197.95,7.94 196.84,7.42 195.73,6.91 \
+194.85,6.07 193.96,5.23 193.40,4.15 192.83,3.08 192.63,1.87 192.43,0.67 \
+192.63,-0.52 192.83,-1.73 193.40,-2.80 193.98,-3.88 194.86,-4.72 195.75,-5.55 \
+196.86,-6.07 197.96,-6.58 199.18,-6.71 200.39,-6.84 201.58,-6.57 202.77,-6.31 \
+203.81,-5.68 204.86,-5.05 205.65,-4.12 206.43,-3.19 206.88,-2.06 207.33,-0.92 \
+207.40,0.29 207.46,1.50 207.13,2.68 206.81,3.85 206.12,4.86 205.43,5.87 \
+204.46,6.61 203.49,7.34 202.34,7.73 201.18,8.12 199.96,8.12 198.74,8.11 \
+197.59,7.72 196.43,7.33 195.46,6.59 194.49,5.85 194.49,5.85 194.49,5.86 \
+193.47,6.31 192.44,6.76 190.32,6.59 188.20,6.43 185.83,6.39 183.46,6.36 \
+181.31,6.24 179.16,6.11 176.57,6.05 173.98,5.99 171.75,5.96 169.52,5.93 \
+166.93,6.02 164.35,6.12 161.92,6.17 159.49,6.22 156.89,6.27 154.29,6.32 \
+151.42,6.50 148.54,6.68 145.84,6.92 143.13,7.17 140.58,7.42 138.02,7.68 \
+135.34,8.02 132.66,8.35 130.19,8.47 127.72,8.58 125.52,8.96 123.31,9.35 \
+120.79,9.70 118.26,10.05 115.60,10.20 112.93,10.35 110.65,10.31 108.37,10.27 \
+105.49,10.19 102.61,10.10 99.71,9.84 96.80,9.58 94.27,9.22 91.73,8.86 \
+89.05,8.57 86.37,8.28 84.23,8.11 82.09,7.94 79.61,7.86 77.14,7.79 74.11,7.54 \
+71.08,7.30 68.45,7.11 65.83,6.92 63.66,6.84 61.48,6.76 58.95,6.73 56.41,6.70 \
+53.85,6.67 51.28,6.64 48.83,6.60 46.38,6.56 43.71,6.47 41.04,6.38 38.53,6.26 \
+36.01,6.14 33.74,6.05 31.47,5.95 28.38,5.85 25.30,5.75 21.61,5.66 17.93,5.56 \
+13.71,5.48 9.48,5.40 7.28,5.36 5.09,5.31 2.54,5.30 0,5.29 -0.63,5.21 \
+-1.26,5.14 -1.86,4.91 -2.46,4.68 -2.98,4.32 -3.51,3.96 -3.93,3.48 -4.35,3.00 \
+-4.65,2.44 -4.95,1.87 -5.10,1.25 -5.25,0.63 -5.25,-0.00 -5.25,-0.63 \
+-5.10,-1.25 -4.95,-1.87 -4.65,-2.44 -4.35,-3.00 -3.93,-3.48 -3.51,-3.96 \
+-2.98,-4.32 -2.46,-4.68 -1.86,-4.91 -1.26,-5.14 -0.63,-5.21 0.00,-5.29 \
+0.00,-5.29 L 0,-5.29 Z\"></path></g><g stroke-linecap=\"round\" \
+transform=\"translate(384.16015625 129.02734375) rotate(0 6.203125 \
+6.203125)\"><path d=\"M6.89 -0.42 C8.02 -0.47, 9.22 0.36, 10.19 1.38 C11.16 \
+2.4, 12.57 4.29, 12.71 5.71 C12.86 7.13, 11.83 8.8, 11.06 9.89 C10.28 10.98, \
+9.31 11.9, 8.06 12.26 C6.81 12.61, 4.8 12.6, 3.55 12.04 C2.3 11.48, 1.09 \
+10.11, 0.57 8.92 C0.06 7.74, 0.19 6.28, 0.46 4.93 C0.73 3.57, 1.19 1.61, 2.19 \
+0.79 C3.2 -0.03, 5.68 0.08, 6.47 0.01 C7.26 -0.05, 6.88 0.37, 6.94 0.4 M5.87 \
+0.39 C7.11 0.56, 9.38 1.13, 10.56 2.06 C11.75 2.99, 12.77 4.66, 12.98 5.96 \
+C13.19 7.26, 12.77 8.73, 11.85 9.84 C10.93 10.96, 8.69 12.22, 7.44 12.64 \
+C6.19 13.05, 5.55 12.84, 4.35 12.31 C3.15 11.79, 0.97 10.81, 0.23 9.47 C-0.51 \
+8.13, -0.5 5.55, -0.1 4.26 C0.31 2.98, 1.53 2.39, 2.64 1.76 C3.76 1.14, 5.89 \
+0.7, 6.6 0.54 C7.31 0.38, 6.8 0.71, 6.9 0.81\" stroke=\"none\" \
+stroke-width=\"0\" fill=\"#e03131\"></path><path d=\"M6.84 -0.29 C8.07 -0.22, \
+10.11 0.65, 10.99 1.8 C11.86 2.95, 12.02 5.26, 12.09 6.61 C12.15 7.95, 12.17 \
+8.9, 11.39 9.89 C10.61 10.88, 8.71 12.28, 7.39 12.54 C6.07 12.79, 4.69 12.19, \
+3.49 11.41 C2.3 10.63, 0.75 9, 0.22 7.84 C-0.32 6.69, -0.18 5.7, 0.29 4.48 \
+C0.76 3.27, 1.82 1.3, 3.03 0.55 C4.25 -0.19, 6.73 -0.02, 7.57 0 C8.42 0.01, \
+8.14 0.55, 8.1 0.63 M8.14 -0.18 C9.36 -0.19, 9.96 0.97, 10.56 1.98 C11.15 \
+2.99, 11.58 4.56, 11.71 5.9 C11.84 7.23, 12 8.89, 11.33 9.99 C10.67 11.09, \
+9.05 12.35, 7.72 12.5 C6.39 12.65, 4.7 11.59, 3.35 10.89 C2 10.19, 0.1 9.39, \
+-0.4 8.29 C-0.9 7.19, -0.36 5.63, 0.34 4.28 C1.04 2.93, 2.67 0.96, 3.81 0.2 \
+C4.95 -0.57, 6.49 -0.26, 7.2 -0.3 C7.91 -0.35, 7.95 -0.25, 8.08 -0.05\" \
+stroke=\"#e03131\" stroke-width=\"2\" fill=\"none\"></path></g><g \
+stroke-linecap=\"round\"><g transform=\"translate(390.83984375 136.01171875) \
+rotate(0 0 48.25390625)\"><path d=\"M0 0 C-0.97 33.89, -1.42 68.28, 0 96.51 \
+M0 0 C-0.5 35.74, 0.64 70.31, 0 96.51\" stroke=\"#e03131\" stroke-width=\"2\" \
+fill=\"none\"></path></g><g transform=\"translate(390.83984375 136.01171875) \
+rotate(0 0 48.25390625)\"><path d=\"M0.03 96.52 L-8.15 81.51 L7.26 83.88 \
+L1.72 95.62\" stroke=\"none\" stroke-width=\"0\" fill=\"#e03131\" \
+fill-rule=\"evenodd\"></path><path d=\"M0 96.51 C-3.18 90.95, -5.77 85.73, \
+-6.24 82.87 M0 96.51 C-2.62 91.68, -4.06 85.92, -6.24 82.87 M-6.24 82.87 \
+C-1.73 82.72, 1.86 81.69, 6.44 82.96 M-6.24 82.87 C-1.32 82.58, 2.31 82.73, \
+6.44 82.96 M6.44 82.96 C3.49 88.84, 3.56 93.08, 0 96.51 M6.44 82.96 C4.03 \
+86.98, 2.42 90.71, 0 96.51 M0 96.51 C0 96.51, 0 96.51, 0 96.51 M0 96.51 C0 \
+96.51, 0 96.51, 0 96.51\" stroke=\"#e03131\" stroke-width=\"2\" \
+fill=\"none\"></path></g></g><mask></mask><g stroke-linecap=\"round\"><g \
+transform=\"translate(390.20051548760875 134.46875) rotate(0 0 \
+-39.96484375)\"><path d=\"M0 0 C-0.64 -30.64, 0.26 -57.37, 0 -79.93 M0 0 \
+C-0.04 -31.36, -0.3 -63.8, 0 -79.93\" stroke=\"#e03131\" stroke-width=\"2\" \
+fill=\"none\"></path></g><g transform=\"translate(390.20051548760875 \
+134.46875) rotate(0 0 -39.96484375)\"><path d=\"M-0.28 -78.75 L7.68 -64.4 \
+L-7.64 -67.86 L0.56 -79.37\" stroke=\"none\" stroke-width=\"0\" \
+fill=\"#e03131\" fill-rule=\"evenodd\"></path><path d=\"M0 -79.93 C1.66 \
+-76.37, 4.58 -69.95, 6.24 -66.29 M0 -79.93 C1.83 -74.43, 4.1 -69.73, 6.24 \
+-66.29 M6.24 -66.29 C1.54 -65.41, -3.3 -65.97, -6.44 -66.38 M6.24 -66.29 \
+C2.59 -66.86, -0.94 -65.67, -6.44 -66.38 M-6.44 -66.38 C-5.59 -68.42, -3.27 \
+-71.38, 0 -79.93 M-6.44 -66.38 C-3.78 -69.91, -2.54 -74.98, 0 -79.93 M0 \
+-79.93 C0 -79.93, 0 -79.93, 0 -79.93 M0 -79.93 C0 -79.93, 0 -79.93, 0 \
+-79.93\" stroke=\"#e03131\" stroke-width=\"2\" \
+fill=\"none\"></path></g></g><mask></mask><g \
+transform=\"translate(410.65234375 52.6328125) rotate(0 6.439994812011719 \
+12.5)\"><text x=\"0\" y=\"0\" font-family=\"Virgil, Segoe UI Emoji\" \
+font-size=\"20px\" fill=\"#e03131\" text-anchor=\"start\" \
+style=\"white-space: pre;\" direction=\"ltr\" \
+dominant-baseline=\"text-before-edge\">N</text></g><g \
+transform=\"translate(411.09375 211.6953125) rotate(0 11.339988708496094 \
+12.5)\"><text x=\"0\" y=\"0\" font-family=\"Virgil, Segoe UI Emoji\" \
+font-size=\"20px\" fill=\"#e03131\" text-anchor=\"start\" \
+style=\"white-space: pre;\" direction=\"ltr\" \
+dominant-baseline=\"text-before-edge\">mg</text></g><g \
+stroke-linecap=\"round\"><g transform=\"translate(389.83984375 135.7578125) \
+rotate(0 -23.158203125 17.10546875)\"><path d=\"M0 0 C-10.4 6.62, -19.28 \
+14.33, -46.32 34.21 M0 0 C-14.15 10.95, -28.24 20.33, -46.32 34.21\" \
+stroke=\"#1971c2\" stroke-width=\"2\" fill=\"none\"></path></g><g \
+transform=\"translate(389.83984375 135.7578125) rotate(0 -23.158203125 \
+17.10546875)\"><path d=\"M-46.31 34.5 L-40.16 21.63 L-32.51 30.79 L-45.51 \
+34.01\" stroke=\"none\" stroke-width=\"0\" fill=\"#1971c2\" \
+fill-rule=\"evenodd\"></path><path d=\"M-46.32 34.21 C-44.85 30.69, -42.44 \
+28.04, -39.22 20.99 M-46.32 34.21 C-44.39 30.54, -42.32 25.83, -39.22 20.99 \
+M-39.22 20.99 C-35.94 25.07, -33.49 27.99, -31.63 31.15 M-39.22 20.99 C-37.68 \
+23.28, -35.46 25.99, -31.63 31.15 M-31.63 31.15 C-36.15 31.7, -41.94 33.83, \
+-46.32 34.21 M-31.63 31.15 C-35.28 31.5, -37.91 32.7, -46.32 34.21 M-46.32 \
+34.21 C-46.32 34.21, -46.32 34.21, -46.32 34.21 M-46.32 34.21 C-46.32 34.21, \
+-46.32 34.21, -46.32 34.21\" stroke=\"#1971c2\" stroke-width=\"2\" \
+fill=\"none\"></path></g></g><mask></mask><g stroke-linecap=\"round\"><g \
+transform=\"translate(390.044921875 134.8828125) rotate(0 -38.845703125 \
+17.10546875)\"><path d=\"M0 0 C-32.92 15, -61.18 26.21, -77.69 34.21 M0 0 \
+C-22.62 9.87, -44.28 19.92, -77.69 34.21\" stroke=\"#1971c2\" \
+stroke-width=\"2\" fill=\"none\"></path></g><g \
+transform=\"translate(390.044921875 134.8828125) rotate(0 -38.845703125 \
+17.10546875)\"><path d=\"M-77.29 34.53 L-69.63 23.32 L-61.96 35.88 L-77.18 \
+35.3\" stroke=\"none\" stroke-width=\"0\" fill=\"#1971c2\" \
+fill-rule=\"evenodd\"></path><path d=\"M-77.69 34.21 C-75.2 30.67, -69.27 \
+24.4, -67.75 22.98 M-77.69 34.21 C-75.28 31.45, -72.35 28.61, -67.75 22.98 \
+M-67.75 22.98 C-64.99 26.47, -65.54 30.24, -62.7 34.61 M-67.75 22.98 C-65.78 \
+26.62, -64.11 31.91, -62.7 34.61 M-62.7 34.61 C-65.9 33.55, -72.33 34.68, \
+-77.69 34.21 M-62.7 34.61 C-68.59 34.76, -73.71 34.12, -77.69 34.21 M-77.69 \
+34.21 C-77.69 34.21, -77.69 34.21, -77.69 34.21 M-77.69 34.21 C-77.69 34.21, \
+-77.69 34.21, -77.69 34.21\" stroke=\"#1971c2\" stroke-width=\"2\" \
+fill=\"none\"></path></g></g><mask></mask><g stroke-linecap=\"round\"><g \
+transform=\"translate(390.537109375 132.921875) rotate(0 -56.1328125 \
+17.10546875)\"><path d=\"M0 0 C-23.49 5.15, -44.65 11.34, -112.27 34.21 M0 0 \
+C-29.56 7.69, -58.67 17.91, -112.27 34.21\" stroke=\"#1971c2\" \
+stroke-width=\"2\" fill=\"none\"></path></g><g \
+transform=\"translate(390.537109375 132.921875) rotate(0 -56.1328125 \
+17.10546875)\"><path d=\"M-110.91 34.67 L-101.14 25.08 L-97.03 36.54 L-111.08 \
+32.21\" stroke=\"none\" stroke-width=\"0\" fill=\"#1971c2\" \
+fill-rule=\"evenodd\"></path><path d=\"M-112.27 34.21 C-111.06 31.82, -107.8 \
+29.3, -101.16 24.13 M-112.27 34.21 C-109.36 31.41, -106.06 29.66, -101.16 \
+24.13 M-101.16 24.13 C-99.89 27.22, -98.48 30.26, -97.4 36.24 M-101.16 24.13 \
+C-100.26 28.4, -99.07 32.79, -97.4 36.24 M-97.4 36.24 C-102.18 36.07, -105.46 \
+35.57, -112.27 34.21 M-97.4 36.24 C-100.96 36.12, -105.85 34.43, -112.27 \
+34.21 M-112.27 34.21 C-112.27 34.21, -112.27 34.21, -112.27 34.21 M-112.27 \
+34.21 C-112.27 34.21, -112.27 34.21, -112.27 34.21\" stroke=\"#1971c2\" \
+stroke-width=\"2\" fill=\"none\"></path></g></g><mask></mask><g \
+transform=\"translate(368.77832037865267 90.5451003260898) rotate(0 \
+37.66601259326242 43.17570195612757)\" stroke=\"none\"><path fill=\"#9c36b5\" \
+d=\"M 0,-1.56 Q 0,-1.56 2.28,-1.52 4.57,-1.49 7.17,-1.46 9.76,-1.44 \
+12.78,-1.42 15.80,-1.40 19.28,-1.39 22.76,-1.38 26.35,-1.37 29.94,-1.36 \
+33.60,-1.19 37.26,-1.03 40.95,-0.38 44.64,0.27 47.88,1.42 51.12,2.56 \
+53.99,4.10 56.85,5.63 59.51,7.67 62.17,9.71 64.34,11.93 66.51,14.16 \
+68.21,16.58 69.90,19.01 71.20,21.61 72.49,24.20 73.37,27.13 74.24,30.06 \
+74.84,33.31 75.43,36.56 75.78,40.51 76.13,44.45 76.24,48.31 76.35,52.18 \
+76.15,55.44 75.96,58.70 75.39,61.80 74.83,64.91 73.85,67.64 72.88,70.38 \
+71.65,72.72 70.43,75.07 69.07,76.90 67.71,78.73 66.38,80.11 65.05,81.49 \
+63.66,82.57 62.26,83.65 60.93,84.52 59.59,85.38 58.36,86.02 57.13,86.67 \
+55.52,87.34 53.91,88.01 53.58,88.08 53.26,88.14 52.93,88.10 52.60,88.05 \
+52.30,87.91 52.00,87.76 51.77,87.52 51.53,87.29 51.38,86.99 51.24,86.70 \
+51.19,86.37 51.14,86.04 51.21,85.71 51.27,85.39 51.43,85.10 51.59,84.81 \
+51.84,84.58 52.09,84.36 52.39,84.23 52.69,84.10 53.03,84.07 53.36,84.04 \
+53.68,84.12 54.00,84.20 54.28,84.38 54.56,84.56 54.77,84.81 54.98,85.07 \
+55.10,85.38 55.21,85.70 55.22,86.03 55.23,86.36 55.13,86.68 55.04,86.99 \
+54.84,87.27 54.65,87.54 54.38,87.73 54.11,87.92 53.80,88.02 53.48,88.12 \
+53.15,88.11 52.82,88.11 52.50,87.99 52.19,87.88 51.93,87.67 51.67,87.46 \
+51.49,87.18 51.31,86.90 51.23,86.58 51.15,86.26 51.18,85.93 51.20,85.60 \
+51.33,85.29 51.46,84.99 51.68,84.74 51.91,84.49 52.19,84.33 52.48,84.16 \
+52.48,84.16 52.48,84.16 54.03,83.67 55.58,83.17 56.71,82.76 57.84,82.35 \
+59.14,81.70 60.43,81.04 61.74,80.22 63.05,79.40 64.33,78.28 65.61,77.15 \
+66.86,75.50 68.10,73.85 69.25,71.67 70.41,69.48 71.32,66.96 72.24,64.43 \
+72.79,61.48 73.33,58.54 73.53,55.40 73.72,52.25 73.62,48.47 73.51,44.68 \
+73.17,40.85 72.84,37.03 72.28,33.92 71.72,30.81 70.93,28.09 70.13,25.37 \
+68.93,22.94 67.74,20.51 66.18,18.25 64.62,15.99 62.58,13.90 60.55,11.80 \
+58.07,9.88 55.58,7.97 52.91,6.52 50.23,5.07 47.20,3.99 44.16,2.91 40.65,2.28 \
+37.14,1.66 33.54,1.51 29.94,1.36 26.35,1.37 22.76,1.38 19.28,1.39 15.80,1.40 \
+12.78,1.42 9.76,1.44 7.17,1.46 4.57,1.49 2.28,1.52 0,1.56 -0.18,1.53 \
+-0.37,1.51 -0.54,1.45 -0.72,1.38 -0.88,1.27 -1.03,1.16 -1.16,1.02 -1.28,0.88 \
+-1.37,0.72 -1.46,0.55 -1.50,0.37 -1.55,0.18 -1.55,-0.00 -1.55,-0.18 \
+-1.50,-0.37 -1.46,-0.55 -1.37,-0.72 -1.28,-0.88 -1.16,-1.02 -1.03,-1.16 \
+-0.88,-1.27 -0.72,-1.38 -0.54,-1.45 -0.37,-1.51 -0.18,-1.53 0.00,-1.56 \
+0.00,-1.56 L 0,-1.56 Z\"></path></g><g \
+transform=\"translate(422.12662246830627 164.88150400686197) rotate(0 \
+6.570351469496188 9.039392741299977)\" stroke=\"none\"><path fill=\"#9c36b5\" \
+d=\"M 2.61,0.26 Q 2.61,0.26 2.49,1.50 2.38,2.74 2.21,3.84 2.04,4.95 1.80,6.37 \
+1.57,7.80 1.31,9.12 1.05,10.45 0.81,11.85 0.56,13.25 0.11,14.46 -0.33,15.68 \
+-1.28,14.21 -2.23,12.75 -0.99,12.57 0.23,12.39 1.97,12.43 3.71,12.48 \
+5.75,12.71 7.79,12.94 9.46,13.14 11.13,13.35 12.53,13.54 13.93,13.73 \
+16.46,14.59 19.00,15.46 19.36,15.86 19.72,16.27 19.93,16.77 20.14,17.27 \
+20.18,17.81 20.22,18.35 20.09,18.88 19.96,19.40 19.66,19.86 19.37,20.31 \
+18.94,20.65 18.52,20.99 18.01,21.17 17.50,21.36 16.95,21.37 16.41,21.38 \
+15.89,21.22 15.38,21.05 14.94,20.73 14.50,20.41 14.19,19.97 13.87,19.53 \
+13.72,19.01 13.56,18.49 13.58,17.95 13.60,17.41 13.79,16.90 13.98,16.39 \
+14.32,15.97 14.66,15.55 15.12,15.26 15.58,14.97 16.11,14.84 16.63,14.72 \
+17.17,14.76 17.71,14.81 18.21,15.03 18.71,15.25 19.11,15.61 19.51,15.98 \
+19.78,16.45 20.04,16.92 20.14,17.46 20.24,17.99 20.16,18.53 20.08,19.06 \
+19.84,19.55 19.60,20.03 19.21,20.41 18.82,20.79 18.34,21.03 17.85,21.27 \
+17.31,21.34 16.77,21.41 16.24,21.30 15.71,21.20 15.24,20.93 14.77,20.66 \
+14.77,20.66 14.77,20.66 13.21,20.41 11.65,20.16 10.26,19.95 8.87,19.75 \
+7.01,19.57 5.16,19.40 3.51,19.31 1.86,19.22 0.39,19.22 -1.08,19.23 \
+-2.35,19.18 -3.62,19.13 -4.93,18.19 -6.25,17.25 -6.63,16.06 -7.02,14.87 \
+-6.46,13.60 -5.89,12.33 -5.50,11.30 -5.11,10.26 -4.75,9.14 -4.38,8.02 \
+-4.00,6.63 -3.62,5.24 -3.25,3.73 -2.87,2.21 -2.74,0.97 -2.61,-0.26 \
+-2.54,-0.56 -2.47,-0.87 -2.33,-1.16 -2.19,-1.44 -1.98,-1.68 -1.78,-1.92 \
+-1.52,-2.11 -1.26,-2.29 -0.97,-2.41 -0.68,-2.53 -0.36,-2.57 -0.05,-2.62 \
+0.25,-2.59 0.57,-2.55 0.87,-2.45 1.16,-2.34 1.43,-2.17 1.69,-2.00 1.91,-1.76 \
+2.12,-1.53 2.27,-1.25 2.43,-0.98 2.51,-0.67 2.59,-0.37 2.60,-0.05 2.61,0.26 \
+2.61,0.26 L 2.61,0.26 Z\"></path></g><g \
+transform=\"translate(293.1761265423256 134.5025402735433) rotate(0 \
+4.299995422363281 12.5)\"><text x=\"0\" y=\"0\" font-family=\"Virgil, Segoe \
+UI Emoji\" font-size=\"20px\" fill=\"#1971c2\" text-anchor=\"start\" \
+style=\"white-space: pre;\" direction=\"ltr\" \
+dominant-baseline=\"text-before-edge\">r</text></g><g \
+transform=\"translate(450.992141450418 172.3736809157297) rotate(0 \
+6.089996337890625 12.5)\"><text x=\"0\" y=\"0\" font-family=\"Virgil, Segoe \
+UI Emoji\" font-size=\"20px\" fill=\"#9c36b5\" text-anchor=\"start\" \
+style=\"white-space: pre;\" direction=\"ltr\" \
+dominant-baseline=\"text-before-edge\">w</text></g><g \
+stroke-linecap=\"round\" transform=\"translate(10 10) rotate(0 375.4375 \
+156.6796875)\"><path d=\"M32 0 C189.96 -2.61, 347.63 -2.35, 718.88 0 M32 0 \
+C203.72 -2.19, 376.19 -2.38, 718.88 0 M718.88 0 C738.85 -0.56, 749.93 11.56, \
+750.88 32 M718.88 0 C738.04 1.73, 750.98 9.81, 750.88 32 M750.88 32 C752.03 \
+115, 750.46 200.96, 750.88 281.36 M750.88 32 C751.24 92.53, 751.16 152.83, \
+750.88 281.36 M750.88 281.36 C750.52 304.16, 741.5 314.65, 718.88 313.36 \
+M750.88 281.36 C752.04 304.52, 742.01 315.5, 718.88 313.36 M718.88 313.36 \
+C470.24 315.92, 222.94 316.54, 32 313.36 M718.88 313.36 C449.62 313.16, \
+181.07 313.08, 32 313.36 M32 313.36 C9.62 311.42, 0.98 304.04, 0 281.36 M32 \
+313.36 C10.67 312.15, 1.47 302.53, 0 281.36 M0 281.36 C0.06 186.75, -1.82 \
+93.08, 0 32 M0 281.36 C1.3 186.55, 0.69 90.47, 0 32 M0 32 C-0.38 11.57, 10.33 \
+-1.72, 32 0 M0 32 C-1.01 11.01, 12.69 1.65, 32 0\" stroke=\"transparent\" \
+stroke-width=\"2\" fill=\"none\"></path></g></svg></div>\n", 
+    "Display" -> "markdown", "Hash" -> 
+     "cde3f6fe-e696-4bb4-beac-4c770eb1f5c6", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> ".md\nThere must be a threshold, when our butter starts to \
+flip. Due to the reaction force $\\\\sum \\mathbf{F}_i = 0$ acting on the \
+cetner of mass, we only need to think about ", "Display" -> "codemirror", 
+    "Hash" -> "e4c5f969-a731-4b4c-9a76-cb862e06bf4d", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <|"Hidden" -> True|>, 
+    "PublicFields" -> {"Properties"}, "State" -> "Idle", "Type" -> "Input", 
+    "UID" -> Null, "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "There must be a threshold, when our butter starts to flip. \
+Due to the reaction force $\\\\sum \\mathbf{F}_i = 0$ acting on the cetner of \
+mass, we only need to think about ", "Display" -> "markdown", 
+    "Hash" -> "a4b3a3f0-9dc5-436f-a448-d1f254fc4507", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "Cross[{rx,0,rz}, {0,0,pz}]", "Display" -> "codemirror", 
+    "Hash" -> "6fde73b1-6864-415c-92d6-b5fab936b817", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "{0,-pz rx,0}", "Display" -> "codemirror", 
+    "Hash" -> "23a2a789-ba32-488e-8e0d-27636cab3bb9", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "Integrate[rx, {rx, -1, a}] // Simplify ", 
+    "Display" -> "codemirror", "Hash" -> 
+     "eebcee86-cf23-42e5-94f1-74cbec25157c", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>, 
+   <|"Data" -> "((*FB[*)((1)(*,*)/(*,*)(2))(*]FB*)) \
+(-1+(*SpB[*)Power[a(*|*),(*|*)2](*]SpB*))", "Display" -> "codemirror", 
+    "Hash" -> "b566dacf-a1de-41f3-a3f3-14d1bbee3afc", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Output", "UID" -> Null, 
+    "Notebook" -> "9fe6c044-2be0-46eb-b9ce-1f18959a02fc"|>}, 
+ "serializer" -> "jsfn4"|>

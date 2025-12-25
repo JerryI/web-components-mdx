@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="container">
+      <div className="container-main">
         <section className="hero">
           <h1>Welcome to My Blog</h1>
           <p>Exploring web development, technology, and ideas.</p>

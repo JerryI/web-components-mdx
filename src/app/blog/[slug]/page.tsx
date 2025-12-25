@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getPostBySlug, getAllPosts } from "@/lib/mdx";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import { MDXContent } from "@/components/mdx-content";
 import { notFound } from "next/navigation";
 
 interface PageProps {
@@ -42,7 +43,7 @@ export default async function BlogPost({ params }: PageProps) {
 
   return (
     <div>
-      <div className="container" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
+      <div className="container-main" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
         <Link href="/blog" style={{ color: 'var(--accent)', display: 'inline-block', marginBottom: '1.5rem' }}>
           ← Back to posts
         </Link>
@@ -72,7 +73,7 @@ export default async function BlogPost({ params }: PageProps) {
           </header>
 
           <div className="mdx-content">
-            <MDXRemote source={post.content} />
+            <MDXContent content={post.content} />
           </div>
         </article>
 

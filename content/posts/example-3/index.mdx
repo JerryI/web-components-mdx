@@ -1,0 +1,48 @@
+---
+title:  Interactive Graphics
+---
+
+{/* add this script to the body  */}
+{/* https://cdn.jsdelivr.net/gh/WLJSTeam/web-components@latest/src/common/app.js */}
+<wljs-store kernel="./attachments/kernel-2407842088486852519.txt" json="./attachments/32ff4449-05a8-48dc-af03-5581741fd268.txt"></wljs-store>
+
+
+
+
+# Interactive Graphics
+In the previous tutorial, we tried input element slider, however, graphics primitives can also act like an virtual input device.
+
+There are several events we can capture, but lets focus on `zoom` and `drag`
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`udata = {{-1,0}, {1,0}};
+
+Graphics[{
+  Cyan, Line[udata // Offload], Red, PointSize[0.05],
+  EventHandler[Point[{0,0.5}], {
+    "drag" -> drag,
+    "zoom" -> zoom
+  }]
+}, PlotRange->{{-1,1}, {0,1}}]`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`(*VB[*)(Graphics[{RGBColor[0, 1, 1], Line[Offload[udata]], RGBColor[1, 0, 0], PointSize[0.05], EventListener[Point[{0, 0.5}], {"drag" -> "08dc3540-a7b3-4287-8d74-408462b43666", "zoom" -> "08dc3540-a7b3-4287-8d74-408462b43666"}]}, PlotRange -> {{-1, 1}, {0, 1}}])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KWlMIB4HkHAvSizIyEwuTmOFyftkFpekMcPkg9ydnPNz8osygWyGTEYYgTDOJzMvFcJjBxL+aWk5+YkpxSDTSlMSSxKxmAQ2hAFGQPRyAomA/My8kuDMqtSiWTNBYKU9xJm8QMK1LDWvBOSy1LzUIogWVpgWiCqY08GGFjGAwQN7VDkEL6g0JzUYxEgpSkwPVgEyDCxSko1NTQx0E82TjHVNjCzMdS1SzE10TQwsTMyMkkyMzczMsOivys/PJVM/xNM5+SVBiXnpqbhcCvbTfyCAhDumX8HiAM6RZHE="*)(*]VB*)`}</wljs-editor>
+
+Ok, then lets generate the data
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`ClearAll[generate];
+generate[{x_, y_}, k_] := Table[{t, y Exp[- (*FB[*)(((*SpB[*)Power[(x - t)(*|*),(*|*)2](*]SpB*))(*,*)/(*,*)(2 k))(*]FB*)]}, {t,-1,1, 0.03}]`}</wljs-editor>
+
+We should generate it everytime, when we have interact with a dot
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`defaults = {{0, 0.5}, 1/20.};
+
+drag[xy_] := (
+  defaults[[1]] = xy;
+  udata = generate @@ defaults;
+)
+
+zoom[k_] := (
+  defaults[[2]] = k / 20.;
+  udata = generate @@ defaults;
+)`}</wljs-editor>
+
+*Now try to drag and use a mouse wheel on a point above*

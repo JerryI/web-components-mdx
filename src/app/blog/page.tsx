@@ -11,7 +11,7 @@ export default function Blog() {
 
   return (
     <div>
-      <div className="container" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
+      <div className="container-main" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
         <div style={{ marginBottom: '3rem' }}>
           <h1>Blog</h1>
           <p style={{ color: 'var(--muted)' }}>Thoughts on web development, technology, and more.</p>

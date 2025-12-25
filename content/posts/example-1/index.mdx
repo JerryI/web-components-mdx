@@ -1,0 +1,58 @@
+---
+title: Hypotrochoids
+---
+
+{/* add this script to the body  */}
+{/* https://cdn.jsdelivr.net/gh/WLJSTeam/web-components@latest/src/common/app.js */}
+<wljs-store kernel="./attachments/kernel-8980910339200136509.txt" json="./attachments/55d30f7f-c0f5-4a9e-a2be-217fd44103b6.txt"></wljs-store>
+
+
+
+
+
+# Hypotrochoids
+
+> Spirograph-like curves arise from simple sums of rotating vectors; a tiny tweak in frequency or phase yields striking patterns.
+
+Compact parametric form: 
+$$
+x(t)=R\cos t+r\cos(kt+\varphi),\\ y(t)=R\sin t+r\sin(kt+\varphi),
+$$ 
+where \(k\) is the frequency ratio. Rational \(k\) ⇒ closed patterns; irrational \(k\) ⇒ long, nonrepeating traces. ℂ numbers allow to write such expressions much shorter, for instance:
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`ParametricPlot[ReIm[(*SpB[*)Power[I(*|*),(*|*)-t](*]SpB*) + 3 (*SpB[*)Power[I(*|*),(*|*)t/3](*]SpB*)], {t, 0, 4Pi}]`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`(*VB[*)(FrontEndRef["0b2a2ce6-db3b-46a8-9cfb-03bf3f69a7f7"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKGyQZJRolp5rppiQZJ+mamCVa6FompyXpGhgnpRmnmVkmmqeZAwCSjhZi"*)(*]VB*)`}</wljs-editor>
+
+We can nicely decompose it back into 2 components and animate it using `Animate` expression and bunch of arrows:
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Animate[
+  ParametricPlot[ReIm[(*SpB[*)Power[I(*|*),(*|*)-t](*]SpB*) + 3 (*SpB[*)Power[I(*|*),(*|*)t/3](*]SpB*)], {t,0,u}, 
+    Epilog->{
+      Arrow[{{0,0}, ReIm[(*SpB[*)Power[I(*|*),(*|*)-u](*]SpB*)]}], 
+      Arrow[{ ReIm[(*SpB[*)Power[I(*|*),(*|*)-u](*]SpB*)], ReIm[(*SpB[*)Power[I(*|*),(*|*)-u](*]SpB*) + 3 (*SpB[*)Power[I(*|*),(*|*)u/3](*]SpB*)]}]
+    }, PlotRange->{{-4,4}, {-4,4}}, GridLines->Automatic,
+    PlotStyle->(*VB[*)(RGBColor[1, 0, 0])(*,*)(*"1:eJxTTMoPSmNiYGAo5gUSYZmp5S6pyflFiSX5RcEsQBHn4PCQNGaQPAeQCHJ3cs7PyS8qYgCDD/ZQBgMDnAEA4iUPRg=="*)(*]VB*)
+  ]
+, {u, 0.001, 4Pi}, RefreshRate->30, Appearance->None]`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`(*VB[*)(FrontEndRef["c8997936-9d6d-4090-b476-7436bc1c096d"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKJ1tYWppbGpvpWqaYpeiaGFga6CaZmJvpmpsYmyUlGyYbWJqlAAB1/xUA"*)(*]VB*)`}</wljs-editor>
+
+:::note
+Here we start from `0.001` to avoid zeros in `ParametricPlot`, othwersize it will throw a warning message
+:::
+
+## Bonus: Rosetta
+Now we can try and more complex variants - to add the filling:
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Animate[ParametricPlot[{
+  (*SpB[*)Power[I(*|*),(*|*)-(*FB[*)((20t)(*,*)/(*,*)(tt))(*]FB*)](*]SpB*)+3 (*SpB[*)Power[I(*|*),(*|*)(*FB[*)((20t)(*,*)/(*,*)(tt))(*]FB*)](*]SpB*)+(*SpB[*)Power[I(*|*),(*|*)(*FB[*)((20t)(*,*)/(*,*)(tt))(*]FB*)](*]SpB*)Sin[8 Pi (*FB[*)((20t)(*,*)/(*,*)(tt))(*]FB*)/5],
+  (*SpB[*)Power[I(*|*),(*|*)-t](*]SpB*)+3 (*SpB[*)Power[I(*|*),(*|*)t](*]SpB*),
+  (*SpB[*)Power[I(*|*),(*|*)-t](*]SpB*)+3 (*SpB[*)Power[I(*|*),(*|*)t](*]SpB*)+(*SpB[*)Power[I(*|*),(*|*)t](*]SpB*)Sin[8 Pi t/5]
+}//ReIm//Evaluate, {t,0,tt}, 
+  PlotRange -> {-5,5}, PlotPoints -> 200,
+  PlotStyle -> {LightGray,Default,(*VB[*)(Hue[0.35000000000000003, 0.78, 0.49])(*,*)(*"1:eJxTTMoPSmNiYGAo5gUSYZmp5S6pyflFiSX5RcEsQBHn4PCQNGaQPAeQCHJ3cs7PyS8q2ubQ9Oj4jN32RTH9h75qxNy3L/r/xr3rxIZD9gCIyhxD"*)(*]VB*)}, Axes->False,
+  Epilog -> {
+    {Thick,Red,Line[{ReIm[(*SpB[*)Power[I(*|*),(*|*)-tt](*]SpB*)+3 (*SpB[*)Power[I(*|*),(*|*)tt](*]SpB*)-(*SpB[*)Power[I(*|*),(*|*)tt](*]SpB*)],ReIm[(*SpB[*)Power[I(*|*),(*|*)-tt](*]SpB*)+3 (*SpB[*)Power[I(*|*),(*|*)tt](*]SpB*)+(*SpB[*)Power[I(*|*),(*|*)tt](*]SpB*)]}]}, {Thick,Circle[ReIm[(*SpB[*)Power[I(*|*),(*|*)-tt](*]SpB*)+3 (*SpB[*)Power[I(*|*),(*|*)tt](*]SpB*)+(*SpB[*)Power[I(*|*),(*|*)tt](*]SpB*)Sin[8 Pi tt/5]],0.1]}
+  }, PlotPoints -> 10
+],{{tt,19.9},0.01,4 5, 0.1}, Appearance -> None]`}</wljs-editor>
