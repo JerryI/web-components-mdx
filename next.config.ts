@@ -14,9 +14,12 @@ const withMDX = createMDX({
   },
 });
 
+const isDev = process.env.NODE_ENV !== "production";
 const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
-  output: "export",
+  // Static export for GH Pages; routes not included in export, only static files
+  output: isDev ? undefined : "export",
+  trailingSlash: true,
 };
 
 export default withMDX(nextConfig);

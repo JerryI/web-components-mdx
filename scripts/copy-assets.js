@@ -4,7 +4,8 @@ const fs = require('fs');
 const path = require('path');
 
 const contentDir = path.join(process.cwd(), 'content', 'posts');
-const publicDir = path.join(process.cwd(), 'public', 'posts');
+// For static export, assets should live under public/blog/{slug}/attachments
+const publicBlogDir = path.join(process.cwd(), 'public', 'blog');
 
 function copyRecursive(src, dest) {
   // Create destination directory if it doesn't exist
@@ -44,55 +45,16 @@ function copyAttachments() {
 
   postDirs.forEach((postDir) => {
     const attachmentsSource = path.join(contentDir, postDir, 'attachments');
-    const attachmentsDest = path.join(publicDir, postDir, 'attachments');
+    const attachmentsDestBlog = path.join(publicBlogDir, postDir, 'attachments');
 
     if (fs.existsSync(attachmentsSource)) {
-      copyRecursive(attachmentsSource, attachmentsDest);
+      copyRecursive(attachmentsSource, attachmentsDestBlog);
     }
   });
 
   console.log('✅ Assets copied successfully');
 }
 
-// Replace attachment paths in MDX files
-function replaceAssetPaths() {
-  if (!fs.existsSync(contentDir)) {
-    return;
-  }
-
-  const postDirs = fs.readdirSync(contentDir).filter((file) => {
-    return fs.statSync(path.join(contentDir, file)).isDirectory();
-  });
-
-  postDirs.forEach((postDir) => {
-    const postPath = path.join(contentDir, postDir);
-    const files = fs.readdirSync(postPath);
-
-    files.forEach((file) => {
-      if (file.endsWith('.mdx')) {
-        const filePath = path.join(postPath, file);
-        let content = fs.readFileSync(filePath, 'utf8');
-
-        // Replace various attachment path formats with the public path
-        const publicPath = `/posts/${postDir}/attachments`;
-        
-        // First, fix any doubled paths like /posts/example-2//posts/example-2/attachments/
-        content = content.replace(new RegExp(`/posts/${postDir}//posts/${postDir}/attachments/`, 'g'), `${publicPath}/`);
-        
-        // Replace ./attachments/ with /posts/{postDir}/attachments/
-        content = content.replace(/\.\/attachments\//g, `${publicPath}/`);
-        
-        // Replace attachments/ with /posts/{postDir}/attachments/ (but not if already /posts/)
-        content = content.replace(/(?<!\/posts\/[^/]+)(?<!\.)\battachments\//g, `${publicPath}/`);
-
-        fs.writeFileSync(filePath, content, 'utf8');
-        console.log(`Updated paths in: ${path.relative(process.cwd(), filePath)}`);
-      }
-    });
-  });
-
-  console.log('✅ Asset paths updated successfully');
-}
-
+// For static export we keep MDX paths relative (attachments/...), so no rewriting.
 copyAttachments();
-replaceAssetPaths();
+

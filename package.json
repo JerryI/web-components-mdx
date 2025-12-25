@@ -5,10 +5,10 @@
   "scripts": {
     "copy-assets": "node scripts/copy-assets.js",
     "dev": "npm run copy-assets && next dev --webpack",
-    "build": "npm run copy-assets && next build --webpack",
-    "start": "next start --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
     "lint": "eslint",
-    "export": "next build && next export",
+    "export": "npm run copy-assets && next build --webpack",
     "deploy:gh": "npx gh-pages -d out"
   },
   "dependencies": {
@@ -17,16 +17,20 @@
     "@next/mdx": "^16.1.1",
     "gray-matter": "^4.0.3",
     "katex": "^0.16.27",
+    "mime-types": "^2.1.35",
     "next": "16.1.1",
     "next-mdx-remote": "^5.0.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "rehype-katex": "^7.0.1",
+    "remark-directive": "^4.0.0",
     "remark-math": "^6.0.0",
     "rss": "^1.2.2",
-    "shiki": "^3.20.0"
+    "shiki": "^3.20.0",
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
+    "@types/mime-types": "^3.0.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

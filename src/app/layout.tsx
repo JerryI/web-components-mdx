@@ -41,7 +41,7 @@ export default function RootLayout({
         {children}
         {/* Example: external script loaded after hydration */}
         <Script
-          src="/app.js"
+          src="https://cdn.jsdelivr.net/gh/WLJSTeam/web-components@latest/src/common/app.js"
           strategy="afterInteractive"
           id="wljs-component"
         />

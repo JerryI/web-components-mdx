@@ -1,12 +1,18 @@
-# MDX Blog
+# MDX Blog Template with WLJS Notebooks
 
-A simple, modern blog application built with Next.js and MDX. Write your blog posts in Markdown with the power of React components.
+A basic MDX blog template example that uses exported WLJS Notebooks stored as MDX files with assets, served as blog posts. This showcases how to integrate interactive Jupyter-style notebooks into a modern blog setup using Next.js and MDX.
+
+## Overview
+
+This project demonstrates a blog application built with Next.js and MDX where blog posts are generated from WLJS (Wolfram Language Jupyter) Notebooks. Each notebook is exported to MDX format with associated assets (kernel files, notebooks, attachments) that are served alongside the blog post content.
 
 ## Features
 
-- 📝 Write blog posts in MDX format (Markdown + JSX)
+- 📝 Blog posts from exported WLJS Notebooks in MDX format (Markdown + JSX)
+- 📦 Asset management for notebook files and attachments
 - 🏷️ Support for post metadata (title, date, author, tags)
 - 🔍 Automatic blog post discovery from `content/posts`
+- 💻 Interactive notebook content rendered alongside traditional blog post content
 
 ## Project Structure
 
@@ -44,7 +50,18 @@ npm install
 npm run dev
 ```
 
-3. Open http://localhost:3000 in your browser
+### Deployment
+
+1. Build static:
+```bash
+npm run export 
+```
+
+2. Upload to Github Pages or preview
+```bash
+npx serve out 
+```
+
 
 ## Creating Blog Posts
 

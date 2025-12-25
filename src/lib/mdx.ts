@@ -21,9 +21,20 @@ const postsDirectory = path.join(process.cwd(), "content/posts");
 function readPostFile(fullPath: string, slug: string): Post {
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
+  
+  // If date is not in frontmatter, use file modification date
+  let date = (data as PostMetadata).date;
+  if (!date) {
+    const stats = fs.statSync(fullPath);
+    date = new Date(stats.mtime).toISOString().split('T')[0]; // YYYY-MM-DD format
+  }
+  
   return {
     slug,
-    metadata: data as PostMetadata,
+    metadata: {
+      ...(data as PostMetadata),
+      date,
+    },
     content,
   };
 }
