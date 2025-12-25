@@ -8,19 +8,20 @@ This project demonstrates a blog application built with Next.js and MDX where bl
 
 ## Features
 
-- 📝 Blog posts from exported WLJS Notebooks in MDX format (Markdown + JSX)
+- 📝 Blog posts from exported WLJS Notebooks in MDX format (Markdown + JSX + LaTeX + WLJS code blocks)
 - 🚀 Interactive notebook content rendered alongside traditional blog post content
-- 📦 Asset management for notebook files and attachments
+- Assets are loaded lazily, while valid input expressions are shown in code blocks
+- 📦 Automatic asset management for notebook files and attachments (no need to think about what to put into `public` folder)
 - 🏷️ Support for post metadata (title, date, author, tags)
 - 🔍 Automatic blog post discovery from `content/posts`
-- 🧑‍🚀 Export to Github Pages
+- 🧑‍🚀 Export to Github Pages (recipy included)
 
 ## Project Structure
 
 ```
 .
 ├── content/
-│   └── posts/           # Your blog posts in .mdx format
+│   └── posts/           # Your notebook posts in .mdx format
 ├── src/
 │   ├── app/
 │   │   ├── blog/        # Blog listing and post pages
@@ -37,7 +38,7 @@ This project demonstrates a blog application built with Next.js and MDX where bl
 
 ### Prerequisites
 
-- Node.js 18+ and npm/yarn/pnpm
+- Node.js 22+ and npm/yarn/pnpm
 - WLJS Notebook >= 2.9.2
 
 ### Installation
@@ -52,16 +53,33 @@ npm install
 npm run dev
 ```
 
-### Deployment
+### Deployment (Github Pages)
 
-1. Build static:
+1. Edit the repository name at
 ```bash
-npm run export 
+./next.config.ts
 ```
 
-2. Upload to Github Pages or preview
+2. Commit and push
+
+### Deployment (Any)
+
+1. Edit the relative path at
 ```bash
-npx serve out 
+./next.config.ts
+```
+
+2. Build and export
+```bash
+npm run export
+```
+
+3. Test locally (optional)
+
+*remove relative path from next.config.ts to make it work locally*
+
+```bash
+npx serve out
 ```
 
 
@@ -84,7 +102,7 @@ tags: ["tag1", "tag2", "tag3"]
 
 # Your Post Title
 
-Your content goes here. You can use standard Markdown syntax.
+Your content goes here or generated data from WLJS Notebook
 ```
 
 ### Frontmatter Fields
@@ -98,16 +116,7 @@ Your content goes here. You can use standard Markdown syntax.
 ## Available Scripts
 
 - `npm run dev` - Start the development server
-- `npm run build` - Build for production
 - `npm run export` - Export statics for Github Pages
-
-## Technologies
-
-- **Next.js 15** - React framework with App Router
-- **MDX** - Markdown + JSX support
-- **TypeScript** - Type-safe JavaScript
-- **next-mdx-remote** - MDX rendering in Next.js
-- **gray-matter** - YAML front matter parsing
 
 ## License
 
