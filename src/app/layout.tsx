@@ -27,6 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta name="viewport" content="minimum-scale=0.75, initial-scale=0.75, width=device-width, user-scalable=no"/>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <nav className="site-nav">
           <div className="nav-inner container-main">

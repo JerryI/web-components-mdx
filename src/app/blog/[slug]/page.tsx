@@ -41,6 +41,22 @@ export default async function BlogPost({ params }: PageProps) {
     notFound();
   }
 
+  // Transform relative attachment paths to absolute paths with basePath
+  const basePath = process.env.NODE_ENV === 'production' ? '/web-components-mdx' : '';
+  let transformedContent = post.content;
+  
+  // Replace relative paths in attributes (like kernel="./attachments/...")
+  transformedContent = transformedContent.replace(
+    /(\s(?:kernel|json|src|href))=["']\.\/attachments\//g,
+    `$1="${basePath}/blog/${slug}/attachments/`
+  );
+  
+  // Replace markdown image syntax ![](attachments/...)
+  transformedContent = transformedContent.replace(
+    /!\[([^\]]*)\]\(attachments\//g,
+    `![$1](${basePath}/blog/${slug}/attachments/`
+  );
+
   return (
     <div>
       <div className="container-main" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
@@ -73,7 +89,7 @@ export default async function BlogPost({ params }: PageProps) {
           </header>
 
           <div className="mdx-content">
-            <MDXContent content={post.content} />
+            <MDXContent content={transformedContent} />
           </div>
         </article>
 
