@@ -1,5 +1,7 @@
 # MDX Blog Template with WLJS Notebooks
 
+***RELEASE IS NOT STABLE, PLEASE WAIT***
+
 A basic MDX blog template that uses exported [WLJS Notebooks](https://wljs.io) as MDX files with assets, served as blog posts. This showcases how to integrate interactive Jupyter-style notebooks into a static blog setup using Next.js and MDX with minimal JS.
 
 Each notebook is exported to MDX with associated assets (kernel files, original notebooks, attachments), which are served alongside the blog post content.
