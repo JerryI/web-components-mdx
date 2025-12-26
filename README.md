@@ -1,20 +1,20 @@
 # MDX Blog Template with WLJS Notebooks
 
-A basic MDX blog template example that uses exported WLJS Notebooks stored as MDX files with assets, served as blog posts. This showcases how to integrate interactive Jupyter-style notebooks into a modern blog setup using Next.js and MDX.
+A basic MDX blog template that uses exported [WLJS Notebooks](https://wljs.io) as MDX files with assets, served as blog posts. This showcases how to integrate interactive Jupyter-style notebooks into a static blog setup using Next.js and MDX with minimal JS.
 
-## Overview
-
-This project demonstrates a blog application built with Next.js and MDX where blog posts are generated from [WLJS Notebooks](https://wljs.io). Each notebook is exported to MDX format with associated assets (kernel files, notebooks, attachments) that are served alongside the blog post content.
+Each notebook is exported to MDX with associated assets (kernel files, original notebooks, attachments), which are served alongside the blog post content.
 
 ## Features
 
-- 📝 Blog posts from exported WLJS Notebooks in MDX format (Markdown + JSX + LaTeX + WLJS code blocks)
+- 📝 SSG blog posts from exported WLJS Notebooks in MDX format
 - 🚀 Interactive notebook content rendered alongside traditional blog post content
-- Assets are loaded lazily, while valid input expressions are shown in code blocks
-- 📦 Automatic asset management for notebook files and attachments (no need to think about what to put into `public` folder)
-- 🏷️ Support for post metadata (title, date, author, tags)
+- 🧮 LaTeX and admonitions support
+- WLJS blocks load lazily, while valid input expressions are shown as code blocks
+- Low FCP (First Contentful Paint) and TTI (Time to Interactive) time
+- 📦 Automatic asset management for notebook files and attachments (no need to manually place assets in the `public` folder)
+- 🏷️ Support for basic post metadata (title, date, author, tags)
 - 🔍 Automatic blog post discovery from `content/posts`
-- 🧑‍🚀 Export to Github Pages (recipy included)
+- 🧑‍🚀 Ready-to-go workflow for publishing the blog on GitHub Pages
 
 ## Project Structure
 
@@ -22,24 +22,31 @@ This project demonstrates a blog application built with Next.js and MDX where bl
 .
 ├── content/
 │   └── posts/           # Your notebook posts in .mdx format
+│       └──notebook-1/
+│          ├── index.mdx      # Post in MDX
+│          └── attachments/   # Any related assets
 ├── src/
 │   ├── app/
 │   │   ├── blog/        # Blog listing and post pages
 │   │   ├── page.tsx     # Home page
-│   │   └── layout.tsx   # Root layout with navigation
+│   │   ├── layout.tsx   # Root layout with navigation
+│   │   └── globals.css  # Root styles
 │   ├── components/      # React components
 │   ├── lib/
 │   │   └── mdx.ts       # MDX utilities for reading posts
 │   └── styles/
-└── public/              # Static assets
+└── public/              # Static assets (managed)
 ```
+
+## Online demo
+Please visit [wljsteam.github.io/web-components-mdx](https://wljsteam.github.io/web-components-mdx)
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js 22+ and npm/yarn/pnpm
-- WLJS Notebook >= 2.9.2
+- WLJS Notebook 2.9.2+ (only if WLJS features are needed)
 
 ### Installation
 
@@ -53,9 +60,9 @@ npm install
 npm run dev
 ```
 
-### Deployment (Github Pages)
+### Deployment (GitHub Pages)
 
-1. Edit the repository name at
+1. Edit the repository name in
 ```bash
 ./next.config.ts
 ```
@@ -64,7 +71,7 @@ npm run dev
 
 ### Deployment (Any)
 
-1. Edit the relative path at
+1. Edit the relative path in
 ```bash
 ./next.config.ts
 ```
@@ -74,14 +81,6 @@ npm run dev
 npm run export
 ```
 
-3. Test locally (optional)
-
-*remove relative path from next.config.ts to make it work locally*
-
-```bash
-npx serve out
-```
-
 
 ## Creating Blog Posts
 
@@ -89,7 +88,7 @@ Blog posts are MDX files stored in the `content/posts` directory.
 
 ### Post Format
 
-Each post should have frontmatter at the top:
+Each post can have frontmatter at the top:
 
 ```mdx
 ---
@@ -112,6 +111,35 @@ Your content goes here or generated data from WLJS Notebook
 - `description` (optional): Short description for the post listing
 - `author` (optional): Author name
 - `tags` (optional): Array of tags for categorization
+
+### How to export WLJS notebooks
+1. Open your notebook with WLJS app
+2. Click `Share` and choose `MDX` (Static or Interactive)
+3. Export to a new folder at `content/posts/` as `index.mdx`
+
+All assets will be copied automatically.
+
+## WLJS Code Block Renderer
+Notebook interactivity, plots, and 2D/3D graphics are provided by a supporting [web component library](https://github.com/WLJSTeam/web-components) served as a single-entry JavaScript file loaded via CDN. In this template, it is included in the footer of `layout.tsx`.
+
+```
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx   # <----------
+```
+
+This web component library is **framework-agnostic**; therefore, it is not directly integrated into the React ecosystem as a component. Instead, it is loaded as a script that registers a few custom elements required to render the notebook’s interactive building blocks.
+
+By default, the web components are unstyled; you are free to customize them:
+
+```
+├── src/
+│   ├── app/
+│   │   └── globals.css  # <----------
+```
+
+The current styling in this template is designed to avoid major layout shifts during loading. It is important to show meaningful content before WLJS components are fully loaded.
+
 
 ## Available Scripts
 

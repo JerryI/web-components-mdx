@@ -8,8 +8,8 @@ export default function Home() {
     <main>
       <div className="container-main">
         <section className="hero">
-          <h1>Welcome to My Blog</h1>
-          <p>Exploring web development, technology, and ideas.</p>
+          <h1>Welcome to My MDX Blog</h1>
+          <p>Exploring and publishing interactive computational notebooks free of charge with <a href="https://wljs.io">WLJS Notebook</a></p>
           <Link href="/blog" className="btn">Read All Posts</Link>
         </section>
 

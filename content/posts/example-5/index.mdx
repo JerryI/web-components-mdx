@@ -1,0 +1,181 @@
+---
+title:  Shortcuts and syntax sugar
+description: How to type complex expressions and blur the line between code and presentation
+date: "2024-12-26"
+author: "JerryI"
+tags: ["notebooks", "syntax sugar"]
+---
+
+{/* add this script to the body  */}
+{/* https://cdn.jsdelivr.net/gh/WLJSTeam/web-components@latest/src/common/app.js */}
+<wljs-store json="./attachments/f3633451-826f-4528-ac45-504a76cfd1ba.txt"></wljs-store>
+
+
+
+
+## Using shortcuts
+You can enter and edit quite complex equations using just a few shortcuts 
+
+
+![](attachments/short1.gif)<wljs-html encoded="true">{`%3Cbr%20%2F%3E`}</wljs-html>
+
+
+- `Alt+2`, `Cmd+2` hide/show input cell
+- `Ctrl+/` make fraction on selected
+- `Ctrl+6` make superscript on selected
+- `Ctrl+2` make square root on selected
+- `Ctrl+-` make subscript on selected
+
+- `Ctrl+=` make input form for semantic interpretation
+
+
+This is a syntax sugar borrowed from Mathematica, but implemented in a much simpler way
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`(*FB[*)((1)(*,*)/(*,*)(2))(*]FB*)`}</wljs-editor>
+
+If you copy and paste into a normal text editor, what you see is a normal Woflram Language code
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`(*FractionBox[*)((1)(*,*)/(*,*)(2))(*]FractionBox*)`}</wljs-editor>
+
+Wolfram Kernel can generate them as well like you can expect in Mathematica
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Series[Sinc[(*SqB[*)Sqrt[x](*]SqB*)], {x,0,4}] // Normal `}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`1-(*FB[*)((x)(*,*)/(*,*)(6))(*]FB*)+((*FB[*)((1)(*,*)/(*,*)(120))(*]FB*)) ((*SpB[*)Power[x(*|*),(*|*)2](*]SpB*))-(*FB[*)(((*SpB[*)Power[x(*|*),(*|*)3](*]SpB*))(*,*)/(*,*)(5040))(*]FB*)+(*FB[*)(((*SpB[*)Power[x(*|*),(*|*)4](*]SpB*))(*,*)/(*,*)(362880))(*]FB*)`}</wljs-editor>
+
+Here is another example
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`n = (*SqB[*)Sqrt[1 - (*FB[*)(((*SpB[*)Power[(*SbB[*)Subscript[\[Omega](*|*),(*|*)p](*]SbB*)(*|*),(*|*)2](*]SpB*))(*,*)/(*,*)(((*SpB[*)Power[(*SbB[*)Subscript[\[Omega](*|*),(*|*)0](*]SbB*)(*|*),(*|*)2](*]SpB*) - 4Pi (*SpB[*)Power[\[Eta](*|*),(*|*)2](*]SpB*) ) - 2 Pi I \[Gamma] \[Eta]))(*]FB*)  ](*]SqB*)  ;`}</wljs-editor>
+
+Then lets expand it into a series
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Series[n, {\[Eta], 0, 1}]`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`(*VB[*)(SeriesData[\[Eta], 0, {Sqrt[(Subscript[\[Omega], 0]^2 - Subscript[\[Omega], p]^2)/Subscript[\[Omega], 0]^2], ((-I)*Pi*\[Gamma]*Subscript[\[Omega], p]^2*Sqrt[(Subscript[\[Omega], 0]^2 - Subscript[\[Omega], p]^2)/Subscript[\[Omega], 0]^2])/(Subscript[\[Omega], 0]^2*(Subscript[\[Omega], 0]^2 - Subscript[\[Omega], p]^2))}, 0, 2, 1])(*,*)(*"1:eJztVEtPwkAQRuPB+Csqp3atseUhwo0WyrtAtyBQegBboPLo9oFQ1N/l33O7NUZPKAnxYrKZnfl2Mq9vM5djW5mcxGIx7wyLsr0wJqehdYFF0bB82+1a5ga+4VcaQEfQAAMd19doIIU6TWMUhVrL3piuFppj4rQeew+uhXxtmOOSYpYGL4BhieR0GujYCzDMFzRBUITR69+HRHtCYpQFzA2RR6g4hHUJKwRxoh4+5jPMSZlUkSIxOXIJSeqAGva2SIL+E/RDgpiIisz3xEfIfAjXf0HA54iuaNAlPwearmV6hZE/0qJZsRTHUs+vLJUgh9ej4dEgzufM6lZVG3YLLuV5v5S3B9MiLD/N07X7RaMipHrzsiAHcFetb9y6KnItfioF8hiKYjqwfLVduPN81bqtZ+1E0ytUAmNXavB+yeHkci+PhFK7uPE7qNapNtrKfCAJSF3aWyFlKUv0aK3ShioqfbkGkSy0C73MjJvFw7r0Lu4n2mfhdlPWC9M7DxVzZDRXi4Cgqrs23wF1eFes"*)(*]VB*)`}</wljs-editor>
+
+---
+
+## Semantic input
+This input box is a wrapper over `SemanticInterpretation` expresison, which uses __natural language__ to interprete the expression
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`(*BB[*)(SemanticInterpretation["red horse"])(*,*)(*"1:eJxTTMoPSmNhYGAo5gcSAUX5ZZkpqSn+BSWZ+XnFaYwgCV4gEZaZWu6SmpxflFiSXxTMARQJTs1NzCvJTE5jAqkBmRBUmpMazAaSKinKzEsHi4UUlaaiqeACCSdm5kBUBYMklWKxqPFITUyBqpFAss8zryS1qKAotSQR5MRoJQAneDHG"*)(*]BB*)`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`(*VB[*)(Entity["Artwork", "ChevalRougeRedHorse::AlexanderCalder"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KWnMIB4vkAjLTC13SU3OL0osyS8KZgOKuOaVZJZUBrMDmY5FJeX5RdnBPEC2c0ZqWWKOQlB+aXoqAPzKFL8="*)(*]VB*)`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`(*VB[*)(Entity["Artwork", "ChevalRougeRedHorse::AlexanderCalder"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KWnMIB4vkAjLTC13SU3OL0osyS8KZgOKuOaVZJZUBrMDmY5FJeX5RdnBPEC2c0ZqWWKOQlB+aXoqAPzKFL8="*)(*]VB*)["Image"]`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`(*VB[*)(FrontEndRef["ad83ceee-b127-4a40-89a6-699d4991bec3"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKJ6ZYGCenpqbqJhkameuaJJoY6FpYJprpmllapphYWhompSYbAwCPFhXi"*)(*]VB*)`}</wljs-editor>
+
+It comes handy when working with units
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`(*BB[*)(SemanticInterpretation["1 inches"])(*,*)(*"1:eJxTTMoPSmNhYGAo5gcSAUX5ZZkpqSn+BSWZ+XnFaYwgCV4gEZaZWu6SmpxflFiSXxTMARQJTs1NzCvJTE5jAqkBmRBUmpMazAaSKinKzEsHi4UUlaaiqeACCSdm5kBUBYMklWKxqPFITUyBqpFAss8zryS1qKAotSQR5MRoJQAneDHG"*)(*]BB*) / (*BB[*)(SemanticInterpretation[" 2 meters"])(*,*)(*"1:eJxTTMoPSmNhYGAo5gcSAUX5ZZkpqSn+BSWZ+XnFaYwgCV4gEZaZWu6SmpxflFiSXxTMARQJTs1NzCvJTE5jAqkBmRBUmpMazAaSKinKzEsHi4UUlaaiqeACCSdm5kBUBYMklWKxqPFITUyBqpFAss8zryS1qKAotSQR5MRoJQAneDHG"*)(*]BB*)`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`(*FB[*)((127)(*,*)/(*,*)(10000))(*]FB*)`}</wljs-editor>
+
+
+## Using command palette
+One can use a helper palette - `Special characters` panel for typing various mathematical operations
+
+
+![](attachments/Screenshot%202024-09-03%20at%2011.29.54.png)
+
+
+and then
+
+
+![](attachments/short2.gif)
+
+For example
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`(*TB[*)Integrate[(*|*)Sin[x](*|*), (*|*)x(*|*)](*|*)(*1:eJxTTMoPSmNiYGAo5gESnnklqelFiSWpTvkVmYwgUVYg4ZaYU5wKAMfBCcU=*)(*]TB*)`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`-Cos[x]`}</wljs-editor>
+
+Or with defined boundaries
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`(*TB[*)Integrate[(*|*)Sin[x](*|*), {(*|*)x(*|*),(*|*)B(*|*),(*|*)A(*|*)}](*|*)(*1:eJxTTMoPSmNiYGAo5gESnnklqelFiSWpTvkVmYwgURYgEVJUmgoAvmMJeQ==*)(*]TB*)`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`-Cos[A]+Cos[B]`}</wljs-editor>
+
+One can also use `InputForm` for taking integrals
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Integrate[Sin[x], x]`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`-Cos[x]`}</wljs-editor>
+
+### Derivatives
+It works in the same way
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`Cos[x]`}</wljs-editor>
+
+Derivative of an undefined function holds it form
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`D[f[x], x]`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`(f')[x] /. {f -> Sin}`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`Cos[x]`}</wljs-editor>
+
+### Series
+Symbolic series is also supported
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`(*TB[*)Sum[(*|*)(*SpB[*)Power[x(*|*),(*|*)2](*]SpB*)(*|*), {(*|*)x(*|*),(*|*)xmin(*|*),(*|*)xmax(*|*)}](*|*)(*1:eJxTTMoPSmNiYGAoZgMSwaW5TvkVmYwgPguQCCkqTQUAeAcHBQ==*)(*]TB*)`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`((*FB[*)((1)(*,*)/(*,*)(6))(*]FB*)) (1+xmax-xmin) (xmax+2 ((*SpB[*)Power[xmax(*|*),(*|*)2](*]SpB*))-xmin+2 xmax xmin+2 ((*SpB[*)Power[xmin(*|*),(*|*)2](*]SpB*)))`}</wljs-editor>
+
+Input form is following
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Sum[(*SpB[*)Power[x(*|*),(*|*)2](*]SpB*), {x, xmin, xmax}]`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`((*FB[*)((1)(*,*)/(*,*)(6))(*]FB*)) (1+xmax-xmin) (xmax+2 ((*SpB[*)Power[xmax(*|*),(*|*)2](*]SpB*))-xmin+2 xmax xmin+2 ((*SpB[*)Power[xmin(*|*),(*|*)2](*]SpB*)))`}</wljs-editor>
+
+### Piecewise
+Piecewise given functions can also be constructed and differentiated
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Plot[ (*TB[*)Piecewise[{{(*|*)Sin[x](*|*),(*|*)x > 0(*|*)},{(*|*)0(*|*),(*|*)True(*|*)}}](*|*)(*1:eJxTTMoPSmNkYGAo5gESAZmpyanlmcWpTvkVmUxAAQBzVQdd*)(*]TB*) , {x,-10,10}]`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`(*VB[*)(FrontEndRef["41a0ff8e-cf3a-4b6c-b31f-822a69cfc2ac"])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwK8rPK3HNS3GtSE0uLUlMykkNVgEKmxgmGqSlWaTqJqcZJ+qaJJkl6yYZG6bpWhgZJZpZJqclGyUmAwCS7RaI"*)(*]VB*)`}</wljs-editor>
+
+### Matrixes
+There is a special snippet, which can help you to work with them. Type `Insert Matrix` in a command palette
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`((*GB[*){{1(*|*),(*|*)0(*|*),(*|*)0}(*||*),(*||*){0(*|*),(*|*)a(*|*),(*|*)0}(*||*),(*||*){0(*|*),(*|*)0(*|*),(*|*)1}}(*]GB*)).((*GB[*){{0(*|*),(*|*)0(*|*),(*|*)1}(*||*),(*||*){1(*|*),(*|*)0(*|*),(*|*)1}(*||*),(*||*){1(*|*),(*|*)0(*|*),(*|*)0}}(*]GB*)) // MatrixForm`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`((*GB[*){{0(*|*),(*|*)0(*|*),(*|*)1}(*||*),(*||*){a(*|*),(*|*)0(*|*),(*|*)a}(*||*),(*||*){1(*|*),(*|*)0(*|*),(*|*)0}}(*]GB*))`}</wljs-editor>
+
+### Greek letters
+To enter Greek's symbols use ESC key and type the first letter. The autocomplete will suggest the corresponding letter. Or use `Special Characters` tool from the command palette
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`(*SpB[*)Power[{\[Alpha], \[Beta], \[Gamma]}(*|*),(*|*)2](*]SpB*)`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`{(*SpB[*)Power[\[Alpha](*|*),(*|*)2](*]SpB*),(*SpB[*)Power[\[Beta](*|*),(*|*)2](*]SpB*),(*SpB[*)Power[\[Gamma](*|*),(*|*)2](*]SpB*)}`}</wljs-editor>
+
+### Crazy and useless things
+For colors and dates the decorations are also supported. For example
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Table[RGBColor[i,j,1], {i,0,1,0.3}, {j,0,1,0.3}] // TableForm  `}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`(*GB[*){{(*VB[*)(RGBColor[0., 0., 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxQAE644M9APZHE10="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[0., 0.3, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxQEGRMRhctoeKfLAHABMyFaE="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[0., 0.6, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxQEGRMRg8toeKfLAHABPiFbE="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[0., 0.8999999999999999, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcxQEHRGTB4Yw8V+WAPAEhEGVA="*)(*]VB*)}(*||*),(*||*){(*VB[*)(RGBColor[0.3, 0., 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcZg8Fl+yIGKIAyPtgDACeWFaE="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[0.3, 0.3, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcZg8FlewSDAQw+2AMARHIX5Q=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[0.3, 0.6, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcZg8FleyjjsX0RAxh8sAcARSIX9Q=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[0.3, 0.8999999999999999, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcZg8Fl+6IzYPDGvogBDD7YAwB5hBuU"*)(*]VB*)}(*||*),(*||*){(*VB[*)(RGBColor[0.6, 0., 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcZg8Fj+yIGKIAyPtgDACjWFbE="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[0.6, 0.3, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcZg8Fjeyjjsn0RAxh8sAcARbIX9Q=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[0.6, 0.6, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcZg8FjewSDAQw+2AMARmIYBQ=="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[0.6, 0.8999999999999999, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRcZg8Fj+6IzYPDGvogBDD7YAwB6xBuk"*)(*]VB*)}(*||*),(*||*){(*VB[*)(RGBColor[0.8999999999999999, 0., 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRedAYM39kUMUABlfLAHAH3PGVA="*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[0.8999999999999999, 0.3, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRedAYM39kXGYHDZvogBDD7YAwCaqxuU"*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[0.8999999999999999, 0.6, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRedAYM39kXGYPDYvogBDD7YAwCbWxuk"*)(*]VB*)(*|*),(*|*)(*VB[*)(RGBColor[0.8999999999999999, 0.8999999999999999, 1])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeGJAIcndyzs/JLwouTyxJzghJzS3ISSxJTWMGyXMgyRedAYM39ggGAxh8sAcAz70fQw=="*)(*]VB*)}}(*]GB*)`}</wljs-editor>
+
+## Misc
+Other syntax sugar
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`ColorData[24]`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`ColorDataFunction[(*VB[*) 24, "Indexed", {1, 10, 1}, {RGBColor[0.9215686274509803, 0.49411764705882355, 0.43137254901960786], RGBColor[1., 0.7215686274509804, 0.2196078431372549], RGBColor[0.9490196078431372, 0.8627450980392157, 0.43529411764705883], RGBColor[0.6705882352941176, 0.8784313725490196, 0.9372549019607843], RGBColor[0.3176470588235294, 0.6549019607843137, 0.7529411764705882], RGBColor[0.12941176470588237, 0.5176470588235295, 0.6313725490196078], RGBColor[0.09019607843137255, 0.33725490196078434, 0.49411764705882355], RGBColor[0.7058823529411765, 0.49411764705882355, 0.5450980392156862], RGBColor[0.5333333333333333, 0.23529411764705882, 0.3058823529411765], RGBColor[0.8941176470588236, 0.7098039215686275, 0.7490196078431373]}[[Mod[Floor[#1], 10, 1]]] &  (*,*)(*"1:eJylU0uzmjAYta/pYzrTZWe6ahcsnQGUW+2OKOIFFS8RLK4aJCAlEAxw1Z/Wf9dEr62ddqbO3M3Jl/M9zgkkn0Lqxs9arVb1gQOg+xFl+TedMVQkOIJNniN24HT8RNS84zBitKiNIvJTVjeInBLPOYwpiY7BjBY4fnqmJ2lV/2v3/kLvQee2xrmf4h18yXO3RYT3Xz6eit9wMKK0pkzkT5qiyIljQlF0Il5z8NzJEK9phKHoU7u/ld2GYPhKBBhFTkEOR3bBGvx/P6JtQAll1SMNKfL1hq7/XEJnjgiua/wIfz84J6k9SdUBkDTAV0ntHwnB+X9w50vg4vhIq8pajpR+p9/uRypud5XPvXbYD+U2QoosY+VGkdUuL5O04XkonzS40NDFEKmjY2u/WEzpHOazLDB1ukoMOL7PNNsdYMMCO7vH5nZnPIMds4aG3Ew8Mj1k2cxPDNs8BGEJNsgk99vlNghKvEWmVYY3g9XK2hTUSgNkbtLMLOmKrytdB73QXfSEsUsn2tD/ddRrzabCrJZM4Q4ufQdlzXZdaG6QEUkFnne3doPE8CHKFDYFvn2Xlw76atkBcOBBZ6RJF8Vou/xu4+kwH5neknc5kaZtlh5JdU9PBrQANfnbKHgwes21qt7yAJao4H8vn+C4rl6I94xIhX8CVVwLAA=="*)(*]VB*)]`}</wljs-editor>
+
+Bytes, dates and etc
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`Now`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`(*VB[*)(DateObject[{2024,12,15,15,52,36.657673\`8.316739872172858},"Instant","Gregorian",1.\`])(*,*)(*"1:eJxTTMoPSmNkYGAoZgESHvk5KRCeEJBwSSxJ9U/KSk0uCUnNLcgB8oKlgMJKwaV5CoamCi6pyQpGBkYmQLaVqZGVsZkSAKz0EfI="*)(*]VB*)`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`ByteArray[{1,2,4}]`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`ByteArray[(*VB[*) "AQIE" (*,*)(*"1:eJxdUUtTgzAQru/HxaMznvSQexvLjHoLVGoBW23oi5ORBIwFUgMMtL/RH2WAOna8fLvfY7I7m5t3MQ4OWq1WeqVAF6UpZPyGpCRJyCjO45jItZKDvSpzocCUIskeEzrlMstJ1BiHCp5EROtmKBL2Jzs8zf6x/Ypd7szbzhlkLJ5yVuBj5WG+YQ/XTfZcwSPlmZCV3bx2omAUBJEgtBHOFEzGTo/5gjL8rRiAdwAiXQeariqA97UAOx0IYFtJ8FdSnrGTQFUI3CJmla77LF5wPOSLPhJa6GM0mWuet1x94QRAXcczT5V5YpJFERrjRdj1+sGycD78V9vqWjbfOGV7BaBZ2KlVuHjQtVafthgafidGMDeMYjaJMDFCRFnJZ/VOO3toPX27enOI6oTjPGL4tGoYoaMkWteqK3OWHlX/Q6KU/QA5C3k3"*)(*]VB*)]`}</wljs-editor>
+
+Time series with a preview
+
+<wljs-editor display="codemirror" type="Input"  >{String.raw`TimeSeries[RandomVariate[NormalDistribution[],100]]`}</wljs-editor>
+
+<wljs-editor display="codemirror" type="Output"  >{String.raw`TimeSeries[(*VB[*) TemporalData[TimeSeries, {{{-0.09156003455617837, 0.680941656068737, 0.6278038681296004, 2.4671789762095706, 0.7878619370518211, 0.05826957639155879, -0.7446280931655739, -1.125326265640196, 0.846512558663347, 0.07859606691252612, -0.02709970213628704, -0.5388376259962762, -1.8681904680886245, 1.4517736982713143, 0.9449521911315317, -0.2977906473771691, 1.4853689269332013, -1.0358443243924507, -0.026584821704066813, -0.556167044974412, -1.0375383643695142, 0.2365576445269245, 0.23112127233731372, -0.2927645057756914, -0.06668792076746909, 0.5897285498065374, -1.0333766180126387, 0.2579322247303672, -0.662897350109155, -0.01788380184672495, -0.7010009908381389, 0.2109259967645456, -0.306971170077819, -0.9482582015065661, 0.09543851994055916, 0.43246652068021635, 2.1552928877704156, 0.03750651598361552, -0.07561882407336115, 1.3762379119640684, -0.6815155615552376, 0.6463000060198303, -0.9431727114032243, 0.1667408588155472, 0.6098784765278249, 0.6758318151265233, -0.6829628883260923, 0.14420843982929005, 1.134701913383204, 1.9461815762145303, 1.6239139580499198, -0.5523277744700019, 0.09482405704629407, 0.5161191124844595, -0.7082952358308221, 1.9680646442871028, -1.775171009416514, 0.7079748742280337, -1.2690839312414803, -0.5701407500187309, -0.29914667884108387, 1.3983204229107757, -0.5347442973471542, 0.3413024476766305, 1.270112050366005, 0.3798390772288763, -1.878532537640844, -0.09627231656362448, -0.32135982766016663, -1.6199271145223166, 1.8187893785069167, 0.603003612312601, 1.0780882756479446, -0.13400387221609458, 1.439864316021579, -0.3630522298972634, -0.42700303710346593, 1.6899698788279722, -0.38422009724943684, 0.13061263053243255, -1.718363381329267, -0.2600778262695301, -0.47879737008183065, 1.0939755730493477, 0.5923378050228082, -0.519792820870725, 0.32493864883062046, -1.6317269267105845, -0.06967448757490832, 0.881353369290387, 1.1971287408964728, 1.301665742085124, 0.09035502086305969, 1.3245018452329265, -0.21392884092267864, 0.09140954609034524, 0.41279055889804306, 1.047770397289787, 1.4416241234659442, 1.3916373632761976}}, {{0, 99, 1}}, 1, {"Continuous", 1}, {"Discrete", 1}, 1, {ResamplingMethod -> {"Interpolation", InterpolationOrder -> 1}, ValueDimensions -> 1}}, False, 14.1] (*,*)(*"1:eJylUk1Lw0AQjd8f6MWL4CmC18CWpDXxpjQFoVBIqmcn3VkJZHfL7oa2/97ZRlCq0KKXx+ybtzNvZ/a20oU4CILA3hA86eVIG/n2aAyod+RlKyWYFdFiz2uuCEZGK5crni9x1jqoGizviK6AxSmL+1EC91WU9HkcwYDxKE7SQY9nyLKUi31f5JBgXFu3cVo38E4KvfhNeP3N36evZ4fytcZFeUy5aS3xIey05wQ5r502Pt2VPiGYCNFo4B1xRvBSjIc40xxLT7GvvkVL7zr1AQKfqGa1Zqemxe1uvDJ0+u9e/L0s28WMvaCgnIOircgxis2hbvV6SbkhOAjnulbO/mOAfnU9ttMIf7i2R/5jQWPxA+ERniw="*)(*]VB*)]`}</wljs-editor>

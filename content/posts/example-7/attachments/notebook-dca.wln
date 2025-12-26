@@ -1,0 +1,9 @@
+<|"Notebook" -> <|"HaveToSaveAs" -> True, "Path" -> "/private/var/folders/fs/\
+ch7ddlhn7jz5vyg5k8bbrxyh0000gn/T/wljs_quicknotes/raft.wln", 
+   "PublicFields" -> {"Properties"}, "Quick" -> True|>, 
+ "Cells" -> {<|"Data" -> "", "Display" -> "codemirror", 
+    "Hash" -> "b1ca075d-9a7f-4905-a674-3fd39c0daf2a", "Invisible" -> False, 
+    "MetaOnly" -> False, "Props" -> <||>, "PublicFields" -> {"Properties"}, 
+    "State" -> "Idle", "Type" -> "Input", "UID" -> Null, 
+    "Notebook" -> "dca35281-3646-4107-8f60-4608011f9703"|>}, 
+ "serializer" -> "jsfn4"|>

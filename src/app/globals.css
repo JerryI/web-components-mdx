@@ -96,6 +96,11 @@ body {
   .hero h1 { font-size: 3rem; }
 }
 
+p img {
+    display: block;
+    width: 100%;
+}
+
 
 /* Styles for WLJS blocks */
 wljs-html,wljs-assets {
@@ -126,9 +131,12 @@ wljs-editor {
   margin-bottom: 1rem;
   min-height: 4rem;
 } 
+wljs-editor.wljs-hide-undefined {
+  display: none;
+}
 wljs-editor.wljs-mounted {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   padding-left: 1rem;
   padding-right: 1rem;
   display: block;

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/mdx";
 
 export const metadata = {
-  title: "Blog",
+  title: "MDX Blog example",
   description: "Read our latest posts",
 };
 
@@ -13,8 +13,8 @@ export default function Blog() {
     <div>
       <div className="container-main" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
         <div style={{ marginBottom: '3rem' }}>
-          <h1>Blog</h1>
-          <p style={{ color: 'var(--muted)' }}>Thoughts on web development, technology, and more.</p>
+          <h1>MDX Blog</h1>
+          <p style={{ color: 'var(--muted)' }}>Exploring and publishing interactive computational notebooks free of charge.</p>
         </div>
 
         {posts.length === 0 ? (
