@@ -122,13 +122,20 @@ Your content goes here or generated data from WLJS Notebook
 All assets will be copied automatically.
 
 ## WLJS Code Block Renderer
-Notebook interactivity, plots, and 2D/3D graphics are provided by a supporting [web component library](https://github.com/WLJSTeam/web-components) served as a single-entry JavaScript file loaded via CDN. In this template, it is included in the footer of `layout.tsx`.
+Notebook interactivity, plots, and 2D/3D graphics are provided by a supporting [web component library](https://github.com/WLJSTeam/web-components) served as a single-entry JavaScript file loaded via CDN:
+
+```
+https://cdn.jsdelivr.net/gh/WLJSTeam/web-components@latest/src/common/app.js
+```
+
+In this template, it is included in the footer of `layout.tsx`.
 
 ```
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx   # <----------
 ```
+
 
 This web component library is **framework-agnostic**; therefore, it is not directly integrated into the React ecosystem as a component. Instead, it is loaded as a script that registers a few custom elements required to render the notebook’s interactive building blocks.
 
