@@ -11,7 +11,9 @@
 
 html, body, #__next {
   height: 100%;
+  touch-action: manipulation;
 }
+
 
 body {
   margin: 0;
