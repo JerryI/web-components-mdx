@@ -7,15 +7,15 @@ Each notebook is exported to MDX with associated assets (kernel files, original 
 
 ## Features
 
-- 📝 SSG blog posts from exported WLJS Notebooks in MDX format
-- 🚀 Interactive notebook content rendered alongside traditional blog post content
-- 🧮 LaTeX and admonitions support
+- SSG blog posts from exported WLJS Notebooks in MDX format
+- Interactive notebook content rendered alongside traditional blog post content
+- LaTeX and admonitions support
 - WLJS blocks load lazily, while valid input expressions are shown as code blocks
 - Low FCP (First Contentful Paint) and TTI (Time to Interactive) time
-- 📦 Automatic asset management for notebook files and attachments (no need to manually place assets in the `public` folder)
-- 🏷️ Support for basic post metadata (title, date, author, tags)
-- 🔍 Automatic blog post discovery from `content/posts`
-- 🧑‍🚀 Ready-to-go workflow for publishing the blog on GitHub Pages
+- Automatic asset management for notebook files and attachments (no need to manually place assets in the `public` folder)
+- Support for basic post metadata (title, date, author, tags)
+- Automatic blog post discovery from `content/posts`
+- Ready-to-go workflow for publishing the blog on GitHub Pages
 
 ## Project Structure
 
@@ -47,7 +47,7 @@ Please visit [wljsteam.github.io/web-components-mdx](https://wljsteam.github.io/
 ### Prerequisites
 
 - Node.js 22+ and npm/yarn/pnpm
-- WLJS Notebook 2.9.2+ (only if WLJS features are needed)
+- WLJS Notebook 2.9.2+ (to generate/export notebooks)
 
 ### Installation
 
