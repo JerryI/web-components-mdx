@@ -11,7 +11,6 @@ Each notebook is exported to MDX with associated assets (kernel files, original 
 - Interactive notebook content rendered alongside traditional blog post content
 - LaTeX and admonitions support
 - WLJS blocks load lazily, while valid input expressions are shown as code blocks
-- Low FCP (First Contentful Paint) and TTI (Time to Interactive) time
 - Automatic asset management for notebook files and attachments (no need to manually place assets in the `public` folder)
 - Support for basic post metadata (title, date, author, tags)
 - Automatic blog post discovery from `content/posts`
